@@ -6,6 +6,8 @@ $airkit_demo_screens_scrapeq $airkit_catalog
 	actions /
 		<= Sample $airkit_pill
 			title @ \Sample data
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/screens/scrapeq
 	Show_page* $airkit_demo_screens_scrapeq_show
 		store <= store
 		job_id <= row_id* \

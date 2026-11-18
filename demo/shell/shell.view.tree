@@ -10,6 +10,8 @@ $airkit_demo_shell $airkit_catalog
 			name <= brand
 	menu_tools /
 		<= Lights $mol_lights_toggle
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit
 	menu_foot /
 		<= Settings $mol_view
 			sub /

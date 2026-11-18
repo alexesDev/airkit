@@ -11,6 +11,8 @@ $airkit_demo_screens_dashboard $mol_page
 				weeks @ \26 weeks
 				months @ \12 months
 			value? <=> period? \days
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/screens/dashboard
 	body /
 		<= Needs $airkit_empty
 			title @ \Needs you — not in the current screen

@@ -4,6 +4,8 @@ $airkit_demo_screens_nodes $airkit_catalog
 	actions /
 		<= Sample $airkit_pill
 			title @ \Sample data
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/screens/nodes
 	Show* $airkit_demo_screens_nodes_show
 		node_name <= node_name* \
 	menu_body /

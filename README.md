@@ -83,7 +83,7 @@ workspace.
 
 ## Widgets
 
-The demo link in each row opens the gallery, where every state is shown.
+The demo link in each row opens the gallery, where every state is shown. Each gallery section and each demo screen carries a source link (the script icon) to its folder in this repository.
 
 | Widget | For | Main properties | States |
 |---|---|---|---|
@@ -102,7 +102,7 @@ The demo link in each row opens the gallery, where every state is shown.
 | `$airkit_chart` | stacked bars on `$mol_plot`, axes, a legend with totals | `series` (`title`, `values`, `rest?`), `labels`, `total_digits` | a `rest` series («other») is grey |
 | `$airkit_runs` | the last runs as a strip | `runs` (`ok`, `bad`, `none`) | — |
 | `$airkit_columns` | column titles once, above a sibling list | `titles`, `sticky` | sticky with a shadow once rows pass under it |
-| `$airkit_section` | a section head: title, note, link | `title`, `note`, `link_title`, `link_arg`, `content` | — |
+| `$airkit_section` | a section head: title, note, link, source link | `title`, `note`, `link_title`, `link_arg`, `source`, `content` | — |
 | `$airkit_problem` | what broke, in a sentence | `title`, `text`, `tone` | `bad`, `warn` |
 | `$airkit_catalog` | a `$mol_book2_catalog` with an `actions` slot and a close icon | `actions`, `close_icon` | — |
 | `$airkit_labeler_moment` | a dated labeler that shows «-» for no date | `title`, `value` | — |

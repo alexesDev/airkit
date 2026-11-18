@@ -5,6 +5,8 @@ $airkit_demo_jobs $airkit_catalog
 	actions /
 		<= Sample $airkit_pill
 			title @ \Sample data
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/jobs
 	Show* $airkit_demo_jobs_show
 		job_id <= job_id* \
 	menu_body /

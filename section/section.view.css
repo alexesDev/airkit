@@ -29,3 +29,13 @@
 	color: var(--airkit_accent);
 	padding: 0;
 }
+
+[airkit_section_head] > [airkit_section_source] {
+	margin-left: auto;
+	padding: .25rem;
+	color: var(--airkit_shade);
+}
+
+[airkit_section_head] > [airkit_section_link] + [airkit_section_source] {
+	margin-left: 0;
+}
