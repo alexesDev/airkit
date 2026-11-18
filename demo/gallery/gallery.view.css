@@ -36,3 +36,22 @@
 	background: var(--airkit_hover);
 }
 
+
+[airkit_demo_gallery_actions_rest],
+[airkit_demo_gallery_actions_pressed],
+[airkit_demo_gallery_actions_pending] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .75rem;
+	align-items: center;
+	margin-bottom: .75rem;
+}
+
+[airkit_demo_gallery_checks],
+[airkit_demo_gallery_portions] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	align-items: center;
+	margin-bottom: 1rem;
+}

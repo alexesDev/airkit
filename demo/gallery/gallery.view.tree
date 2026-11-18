@@ -231,6 +231,102 @@ $airkit_demo_gallery $mol_page
 							click? <=> submit? null
 						<= Form_status $mol_status
 							message <= form_message? \
+		<= Actions $airkit_section
+			title @ \Actions
+			note @ \At rest, pressed, and waiting for the action to finish
+			source \https://github.com/alexesDev/airkit/tree/main/air
+			content /
+				<= Actions_rest $mol_view
+					sub /
+						<= Major_rest $mol_button_major
+							title @ \Run now
+						<= Minor_rest $mol_button_minor
+							title @ \Pause
+						<= Danger_rest $mol_button_major
+							title @ \Revoke
+							attr *
+								^
+								airkit_tone \bad
+				<= Actions_pressed $mol_view
+					sub /
+						<= Major_pressed $mol_button_major
+							title @ \Run now
+							attr *
+								^
+								airkit_pressed \
+						<= Minor_pressed $mol_button_minor
+							title @ \Pause
+							attr *
+								^
+								airkit_pressed \
+						<= Danger_pressed $mol_button_major
+							title @ \Revoke
+							attr *
+								^
+								airkit_tone \bad
+								airkit_pressed \
+				<= Actions_pending $mol_view
+					sub /
+						<= Major_pending $mol_button_major
+							title @ \Run now
+							attr *
+								^
+								airkit_pending \
+						<= Minor_pending $mol_button_minor
+							title @ \Pause
+							attr *
+								^
+								airkit_pending \
+						<= Danger_pending $mol_button_major
+							title @ \Revoke
+							attr *
+								^
+								airkit_tone \bad
+								airkit_pending \
+						<= Major_live $mol_button_major
+							title @ \Try: run for 3 s
+							click? <=> try_run? null
+		<= Stock $airkit_section
+			title @ \Stock widgets under the theme
+			note @ \A checkbox, a portion bar, and a list of plain rows that are not links
+			source \https://github.com/alexesDev/airkit/tree/main/air
+			content /
+				<= Checks $mol_view
+					sub /
+						<= Check_off $mol_check_box
+							title @ \Send a daily digest
+							checked? <=> digest? false
+						<= Check_on $mol_check_box
+							title @ \Keep a copy of every reply
+							checked? <=> copies? true
+				<= Portions $mol_view
+					sub /
+						<= Portion_low $mol_portion
+							portion 0.25
+						<= Portion_high $mol_portion
+							portion 0.8
+				<= Plain_rows $mol_list
+					rows /
+						<= Plain_first $mol_row
+							sub /
+								<= Plain_first_name $mol_labeler
+									title @ \Node
+									content /
+										<= plain_first_name @ \box-1
+								<= Plain_first_used $mol_labeler
+									title @ \Used
+									content /
+										<= plain_first_used @ \38%
+						<= Plain_second $mol_row
+							sub /
+								<= Plain_second_name $mol_labeler
+									title @ \Node
+									content /
+										<= plain_second_name @ \box-2
+								<= Plain_second_used $mol_labeler
+									title @ \Used
+									content /
+										<= plain_second_used @ \12%
 		<= Switch $airkit_section
 			source \https://github.com/alexesDev/airkit/tree/main/air
 			title @ \Segmented switch

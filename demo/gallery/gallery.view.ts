@@ -27,6 +27,13 @@ namespace $.$$ {
 			]
 		}
 
+		override try_run(next?: null) {
+			if (next === undefined) return null
+			this.$.$mol_wait_timeout(3000)
+
+			return null
+		}
+
 		override chart_series() {
 			return $airkit_demo_sample_requests('30d')
 		}
