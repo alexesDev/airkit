@@ -9,6 +9,8 @@ $airkit_demo_keys $airkit_catalog
 			title @ \Create key
 			arg *
 				key \add
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/keys
 	Show* $airkit_demo_keys_show
 		store <= store
 		key_id <= key_id* \

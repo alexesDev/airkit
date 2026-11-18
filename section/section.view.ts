@@ -5,6 +5,7 @@ namespace $.$$ {
 				this.Title(),
 				...this.note() ? [this.Note()] : [],
 				...this.link_title() ? [this.Link()] : [],
+				...this.source() ? [this.Source()] : [],
 			]
 		}
 	}

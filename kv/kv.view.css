@@ -23,3 +23,7 @@
 	min-width: 0;
 	overflow-wrap: anywhere;
 }
+
+[mol_book2] > [mol_page]:not(:nth-last-child(1 of [mol_page])) [airkit_kv] {
+	background: var(--airkit_card);
+}

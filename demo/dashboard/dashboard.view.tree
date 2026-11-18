@@ -9,6 +9,8 @@ $airkit_demo_dashboard $mol_page
 				24h \24 hours
 				7d \7 days
 				30d \30 days
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/dashboard
 	body /
 		<= Needs $airkit_section
 			title @ \Needs you

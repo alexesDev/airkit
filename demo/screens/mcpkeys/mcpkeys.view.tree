@@ -12,6 +12,8 @@ $airkit_demo_screens_mcpkeys $airkit_catalog
 				mcpkey \add
 			sub /
 				<= Add_icon $mol_icon_plus
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/screens/mcpkeys
 	Create_page $airkit_demo_screens_mcpkeys_create
 		store <= store
 	Show_page* $airkit_demo_screens_mcpkeys_show

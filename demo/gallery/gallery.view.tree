@@ -3,8 +3,11 @@ $airkit_demo_gallery $mol_page
 	tools /
 		<= Sample $airkit_pill
 			title @ \Sample data
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/gallery
 	body /
 		<= Pills $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/pill
 			title @ \Status pill
 			note @ \One of four tones. Colour is state, never decoration.
 			content /
@@ -22,6 +25,7 @@ $airkit_demo_gallery $mol_page
 						<= Pill_neutral $airkit_pill
 							title @ \paused
 		<= Stats $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/stat
 			title @ \Stat tile
 			note @ \Value, unit, delta with direction, sparkline, limit meter, not measured
 			content /
@@ -52,6 +56,7 @@ $airkit_demo_gallery $mol_page
 							measured false
 							note @ \no worker reported in 24 h
 		<= Meters $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/meter
 			title @ \Limit meter
 			note @ \A fill and an optional tick at the limit
 			content /
@@ -68,6 +73,7 @@ $airkit_demo_gallery $mol_page
 							tick 0.8
 							tone \bad
 		<= Kv $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/kv
 			title @ \Key–value card
 			content /
 				<= Kv_card $airkit_kv
@@ -77,6 +83,7 @@ $airkit_demo_gallery $mol_page
 						Owner \ops@example.com
 						Created \2026-09-14 10:22
 		<= Attention $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/attention
 			title @ \Needs you
 			note @ \The number is how many items wait; the empty list says so
 			content /
@@ -84,11 +91,13 @@ $airkit_demo_gallery $mol_page
 					entries <= attention_entries /$airkit_attention_entry
 				<= Attention_calm $airkit_attention
 		<= Feed $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/feed
 			title @ \Activity feed
 			content /
 				<= Feed_list $airkit_feed
 					entries <= feed_entries /$airkit_feed_entry
 		<= Empty $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/empty
 			title @ \Empty state
 			content /
 				<= Empty_state $airkit_empty
@@ -99,16 +108,18 @@ $airkit_demo_gallery $mol_page
 						section \keys
 						key \add
 		<= Confirm $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/confirmpage
 			title @ \Confirm page
 			note @ \A destructive action opens a page of its own: what happens, and one button
 			content /
 				<= Confirm_link $mol_link
-					title @ \Open the revoke page of ci-smoke
+					title @ \Open the revoke page of nightly-ci
 					arg *
 						section \keys
 						key \key2
 						key_confirm \revoke
 		<= Secret $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/secret
 			title @ \Secret, shown once
 			note @ \Shown, copied, gone
 			content /
@@ -120,6 +131,7 @@ $airkit_demo_gallery $mol_page
 				<= Secret_gone $airkit_secret
 					stage \gone
 		<= Chips $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/chips
 			title @ \Filter chips
 			content /
 				<= Chips_demo $airkit_chips
@@ -133,6 +145,7 @@ $airkit_demo_gallery $mol_page
 						failing 1
 						paused 1
 		<= Chart $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/chart
 			title @ \Chart
 			note @ \Axes, and a legend that carries the totals
 			content /
@@ -140,6 +153,7 @@ $airkit_demo_gallery $mol_page
 					series <= chart_series /$airkit_chart_series
 					labels <= chart_labels /string
 		<= Runs $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/runs
 			title @ \Last runs
 			content /
 				<= Runs_rows $mol_view
@@ -181,6 +195,7 @@ $airkit_demo_gallery $mol_page
 								\none
 								\none
 		<= List $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/columns
 			title @ \List with labels once
 			note @ \Column titles above the list; each row is a row of labelers
 			content /
@@ -193,6 +208,7 @@ $airkit_demo_gallery $mol_page
 				<= List_rows $mol_list
 					rows <= list_rows /
 		<= Form $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/air
 			title @ \Form
 			note @ \Focus ring, the error line under its field, buttons
 			content /
@@ -216,6 +232,7 @@ $airkit_demo_gallery $mol_page
 						<= Form_status $mol_status
 							message <= form_message? \
 		<= Switch $airkit_section
+			source \https://github.com/alexesDev/airkit/tree/main/air
 			title @ \Segmented switch
 			note @ \A stock $mol_switch under the theme
 			content /

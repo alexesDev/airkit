@@ -5,6 +5,8 @@ $airkit_demo_screens_mailbox $airkit_catalog
 	actions /
 		<= Sample $airkit_pill
 			title @ \Sample data
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/screens/mailbox
 	Spread_default <= Overview
 	spreads *
 		overview <= Overview $airkit_demo_screens_mailbox_overview

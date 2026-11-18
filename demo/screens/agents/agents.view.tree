@@ -15,6 +15,8 @@ $airkit_demo_screens_agents $airkit_catalog
 			arg *
 				agent \apply
 			title @ \Apply
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/screens/agents
 	Show_page* $airkit_demo_screens_agents_show
 		store <= store
 		agent_id <= row_id* 0
@@ -43,7 +45,7 @@ $airkit_demo_screens_agents $airkit_catalog
 		<= Controls $mol_view
 			sub /
 				<= Query $mol_search
-					hint @ \Search by name or description
+					hint @ \Search agents
 					query? <=> query?
 				<= Status_filter $airkit_chips
 					value? <=> status_filter?

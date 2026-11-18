@@ -3,6 +3,7 @@ $airkit_section $mol_section
 	note \
 	link_title \
 	link_arg *
+	source \
 	head <= head_parts /
 		<= Title
 		<= Note $mol_view
@@ -11,3 +12,5 @@ $airkit_section $mol_section
 		<= Link $mol_link
 			arg <= link_arg
 			title <= link_title
+		<= Source $mol_link_source
+			uri <= source

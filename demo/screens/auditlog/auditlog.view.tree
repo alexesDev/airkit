@@ -5,6 +5,8 @@ $airkit_demo_screens_auditlog $mol_page
 	tools /
 		<= Sample $airkit_pill
 			title @ \Sample data
+		<= Source $mol_link_source
+			uri \https://github.com/alexesDev/airkit/tree/main/demo/screens/auditlog
 	body /
 		<= Columns $airkit_columns
 			sticky true
