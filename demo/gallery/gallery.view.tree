@@ -233,7 +233,7 @@ $airkit_demo_gallery $mol_page
 							message <= form_message? \
 		<= Actions $airkit_section
 			title @ \Actions
-			note @ \Rest, and pressed (also the open link of the current page)
+			note @ \At rest, pressed, and waiting for the action to finish
 			source \https://github.com/alexesDev/airkit/tree/main/air
 			content /
 				<= Actions_rest $mol_view
@@ -265,6 +265,27 @@ $airkit_demo_gallery $mol_page
 								^
 								airkit_tone \bad
 								airkit_pressed \
+				<= Actions_pending $mol_view
+					sub /
+						<= Major_pending $mol_button_major
+							title @ \Run now
+							attr *
+								^
+								airkit_pending \
+						<= Minor_pending $mol_button_minor
+							title @ \Pause
+							attr *
+								^
+								airkit_pending \
+						<= Danger_pending $mol_button_major
+							title @ \Revoke
+							attr *
+								^
+								airkit_tone \bad
+								airkit_pending \
+						<= Major_live $mol_button_major
+							title @ \Try: run for 3 s
+							click? <=> try_run? null
 		<= Switch $airkit_section
 			source \https://github.com/alexesDev/airkit/tree/main/air
 			title @ \Segmented switch

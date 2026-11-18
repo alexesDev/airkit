@@ -38,7 +38,8 @@
 
 
 [airkit_demo_gallery_actions_rest],
-[airkit_demo_gallery_actions_pressed] {
+[airkit_demo_gallery_actions_pressed],
+[airkit_demo_gallery_actions_pending] {
 	display: flex;
 	flex-wrap: wrap;
 	gap: .75rem;
