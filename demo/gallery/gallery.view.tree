@@ -103,7 +103,7 @@ $airkit_demo_gallery $mol_page
 			note @ \A destructive action opens a page of its own: what happens, and one button
 			content /
 				<= Confirm_link $mol_link
-					title @ \Open the revoke page of ci-smoke
+					title @ \Open the revoke page of nightly-ci
 					arg *
 						section \keys
 						key \key2

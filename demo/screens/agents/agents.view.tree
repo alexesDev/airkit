@@ -43,7 +43,7 @@ $airkit_demo_screens_agents $airkit_catalog
 		<= Controls $mol_view
 			sub /
 				<= Query $mol_search
-					hint @ \Search by name or description
+					hint @ \Search agents
 					query? <=> query?
 				<= Status_filter $airkit_chips
 					value? <=> status_filter?

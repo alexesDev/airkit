@@ -1,9 +1,9 @@
 namespace $.$$ {
 	const rows = [
-		{ name: 'claude-desktop', status: 'active', tone: 'ok', owner: 'admin@example.com', used: '2026-11-18 13:40' },
-		{ name: 'ci-smoke', status: 'expiring', tone: 'warn', owner: 'admin@example.com', used: '2026-11-17 02:00' },
-		{ name: 'old-laptop', status: 'revoked', tone: 'neutral', owner: 'anna@example.com', used: '2026-10-02 18:11' },
-		{ name: 'notebook', status: 'expiring', tone: 'warn', owner: 'anna@example.com', used: '' },
+		{ name: 'deploy-script', status: 'active', tone: 'ok', owner: 'admin@example.com', used: '2026-11-18 13:40' },
+		{ name: 'nightly-ci', status: 'expiring', tone: 'warn', owner: 'admin@example.com', used: '2026-11-17 02:00' },
+		{ name: 'retired-cli', status: 'revoked', tone: 'neutral', owner: 'anna@example.com', used: '2026-10-02 18:11' },
+		{ name: 'data-notebook', status: 'expiring', tone: 'warn', owner: 'anna@example.com', used: '' },
 	] as const
 
 	export class $airkit_demo_gallery extends $.$airkit_demo_gallery {
@@ -14,13 +14,13 @@ namespace $.$$ {
 		override attention_entries(): readonly $airkit_attention_entry[] {
 			return [
 				{ count: 1, tone: 'bad', what: 'Job partner-deals is failing', why: '3 of the last 4 runs failed, last success at 13:30', action: 'Open job', arg: { section: 'jobs', job: 'partner-deals' } },
-				{ count: 2, tone: 'warn', what: 'Keys expire this week', why: 'notebook on Friday, ci-smoke on Sunday', action: 'Open keys', arg: { section: 'keys' } },
+				{ count: 2, tone: 'warn', what: 'Keys expire this week', why: 'data-notebook on Friday, nightly-ci on Sunday', action: 'Open keys', arg: { section: 'keys' } },
 			]
 		}
 
 		override feed_entries(): readonly $airkit_feed_entry[] {
 			return [
-				{ time: '14:02', who: 'admin@example.com', what: 'revoked key old-laptop' },
+				{ time: '14:02', who: 'admin@example.com', what: 'revoked key retired-cli' },
 				{ time: '14:00', who: 'partner-deals', what: 'failed: check «rows > 0»' },
 				{ time: '13:45', who: 'failed', what: 'check «rows > 0», 4.4 s', tone: 'bad' },
 				{ time: '13:30', who: 'ok', what: '198 rows, 4.0 s', tone: 'ok' },

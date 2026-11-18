@@ -6,7 +6,7 @@ $airkit_chart $mol_view
 		<= Plot $mol_plot_pane
 			gap_left 44
 			gap_right 24
-			gap_top 8
+			gap_top 16
 			gap_bottom 28
 			graphs <= graphs /
 		<= Legend $mol_view

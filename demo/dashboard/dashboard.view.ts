@@ -24,7 +24,7 @@ namespace $.$$ {
 		override attention_entries(): readonly $airkit_attention_entry[] {
 			return [
 				{ count: 1, tone: 'bad', what: 'Job partner-deals is failing', why: '3 of the last 4 runs failed, last success at 13:30', action: 'Open job', arg: { section: 'jobs', job: 'partner-deals' } },
-				{ count: 2, tone: 'warn', what: 'Keys expire this week', why: 'notebook on Friday, ci-smoke on Sunday', action: 'Open keys', arg: { section: 'keys' } },
+				{ count: 2, tone: 'warn', what: 'Keys expire this week', why: 'data-notebook on Friday, nightly-ci on Sunday', action: 'Open keys', arg: { section: 'keys' } },
 				{ count: 1, tone: 'warn', what: 'Backup is 3 days old', why: 'The nightly backup has not finished since Sunday', action: 'Open jobs', arg: { section: 'jobs' } },
 			]
 		}
@@ -66,9 +66,9 @@ namespace $.$$ {
 
 		override feed_entries(): readonly $airkit_feed_entry[] {
 			return [
-				{ time: '14:02', who: 'admin@example.com', what: 'revoked key old-laptop' },
+				{ time: '14:02', who: 'admin@example.com', what: 'revoked key retired-cli' },
 				{ time: '14:00', who: 'partner-deals', what: 'failed: check «rows > 0»' },
-				{ time: '09:31', who: 'anna@example.com', what: 'created key notebook' },
+				{ time: '09:31', who: 'anna@example.com', what: 'created key data-notebook' },
 				{ time: '06:00', who: 'nightly-backup', what: 'did not finish in 2 h' },
 			]
 		}

@@ -23,10 +23,10 @@ namespace $ {
 		@$mol_mem
 		keys(next?: readonly $airkit_demo_keys_key[]) {
 			return next ?? [
-				{ id: 'key1', name: 'claude-desktop', owner: 'admin@example.com', status: 'active', created: '2026-11-02 09:12', used: '2026-11-18 13:40', scope: 'read, write' },
-				{ id: 'key2', name: 'ci-smoke', owner: 'admin@example.com', status: 'expiring', created: '2026-08-21 17:03', used: '2026-11-17 02:00', scope: 'read' },
-				{ id: 'key3', name: 'notebook', owner: 'anna@example.com', status: 'expiring', created: '2026-08-25 11:40', used: '', scope: 'read' },
-				{ id: 'key4', name: 'old-laptop', owner: 'anna@example.com', status: 'revoked', created: '2026-03-02 18:11', used: '2026-10-02 18:11', scope: 'read, write' },
+				{ id: 'key1', name: 'deploy-script', owner: 'admin@example.com', status: 'active', created: '2026-11-02 09:12', used: '2026-11-18 13:40', scope: 'read, write' },
+				{ id: 'key2', name: 'nightly-ci', owner: 'admin@example.com', status: 'expiring', created: '2026-08-21 17:03', used: '2026-11-17 02:00', scope: 'read' },
+				{ id: 'key3', name: 'data-notebook', owner: 'anna@example.com', status: 'expiring', created: '2026-08-25 11:40', used: '', scope: 'read' },
+				{ id: 'key4', name: 'retired-cli', owner: 'anna@example.com', status: 'revoked', created: '2026-03-02 18:11', used: '2026-10-02 18:11', scope: 'read, write' },
 			] as const
 		}
 
