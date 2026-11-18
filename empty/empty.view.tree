@@ -1,0 +1,15 @@
+$airkit_empty $mol_view
+	title \
+	text \
+	action_title \
+	action_arg *
+	sub <= parts /
+		<= Title $mol_view
+			sub /
+				<= title
+		<= Text $mol_view
+			sub /
+				<= text
+		<= Action $mol_link
+			arg <= action_arg
+			title <= action_title

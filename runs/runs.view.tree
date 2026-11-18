@@ -1,0 +1,11 @@
+$airkit_runs $mol_view
+	runs /string
+	attr *
+		^
+		role \img
+		aria-label <= summary \
+	sub <= ticks /
+	Tick* $mol_view
+		attr *
+			airkit_runs_state <= tick_state* \none
+			title <= tick_state*

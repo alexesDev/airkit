@@ -1,0 +1,63 @@
+$airkit_demo_screens_agents_show $mol_page
+	store $airkit_demo_screens_agents_store
+	agent_id 0
+	title <= page_title \
+	tools /
+		<= Sample $airkit_pill
+			title @ \Sample data
+		<= Edit_link $mol_link
+			title @ \Edit
+			arg *
+				agent \edit
+				edit <= id_string \
+		<= Settings_link $mol_link
+			title @ \Settings
+			arg *
+				agent \settings
+				settings <= id_string \
+		<= Toggle $mol_button_minor
+			title <= toggle_title \
+			click? <=> toggle? null
+		<= Archive $mol_link
+			title @ \Archive
+			arg *
+				confirm \archive
+		<= Unarchive $mol_button_minor
+			title @ \Unarchive
+			click? <=> unarchive? null
+	body /
+		<= Status_line $mol_status
+			message <= message? \
+		<= Verdict $mol_text
+			text <= verdict \
+		<= Structure $airkit_demo_screens_agents_structure
+			store <= store
+			agent_id <= agent_id
+		<= Parts $airkit_demo_screens_agents_parts
+			store <= store
+			agent_id <= agent_id
+		<= Fields $airkit_kv
+			fields <= fields *string
+		<= Links $airkit_section
+			title @ \Pages of this agent
+			content <= link_rows /
+		<= Last_error $airkit_problem
+			title @ \Last error
+			text <= last_error \
+		<= Activity $airkit_demo_screens_agents_activity
+			store <= store
+			agent_id <= agent_id
+		<= Backups $airkit_demo_screens_agents_backups
+			store <= store
+			agent_id <= agent_id
+		<= Codex_limit $airkit_demo_screens_agents_codexlimit
+			store <= store
+			agent_id <= agent_id
+	Link_row* $mol_view
+		sub /
+			<= Link* $mol_link
+				uri <= link_uri* \
+				target \_blank
+				title <= link_label* \
+			<= Link_description* $mol_text
+				text <= link_description* \

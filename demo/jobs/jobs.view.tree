@@ -1,0 +1,50 @@
+$airkit_demo_jobs $airkit_catalog
+	param \job
+	menu_title @ \Jobs
+	filter? \all
+	actions /
+		<= Sample $airkit_pill
+			title @ \Sample data
+	Show* $airkit_demo_jobs_show
+		job_id <= job_id* \
+	menu_body /
+		<= Filter $airkit_chips
+			value? <=> filter?
+			options *
+				all @ \All
+				failing @ \Failing
+				paused @ \Paused
+			counts <= filter_counts *number
+		<= Columns $airkit_columns
+			titles /
+				<= columns_text @ \Job
+				<= columns_text_1 @ \Status
+				<= columns_text_2 @ \Last 10 runs
+				<= columns_text_3 @ \Next run
+		<= Menu_links
+	menu_link_content* /
+		<= Row* $mol_row
+			minimal_height 24
+			sub /
+				<= Name* $airkit_labeler_name
+					title @ \Job
+					value <= row_name* \
+				<= Status* $mol_labeler
+					title @ \Status
+					content /
+						<= Status_pill* $airkit_pill
+							tone <= row_tone* \neutral
+							title <= row_status* \
+				<= Runs* $mol_labeler
+					title @ \Last 10 runs
+					content /
+						<= Runs_strip* $airkit_runs
+							runs <= row_runs* /string
+				<= Next* $airkit_labeler_moment
+					title @ \Next run
+					value <= row_next* \
+	Menu_links_empty <= Empty $airkit_empty
+		title @ \No job matches this filter
+		action_title @ \Show all jobs
+		action_arg *
+			job_filter \all

@@ -1,0 +1,39 @@
+$airkit_demo_shell $airkit_catalog
+	param \section
+	brand_default \neutral
+	brand? \neutral
+	plugins /
+		<= Theme $mol_theme_auto
+		<= Air $airkit_air
+			density <= density
+		<= Palette $airkit_brand
+			name <= brand
+	menu_tools /
+		<= Lights $mol_lights_toggle
+	menu_foot /
+		<= Settings $mol_view
+			sub /
+				<= Density_field $mol_view
+					sub /
+						<= Density_label $mol_view
+							sub /
+								<= density_label_text @ \Density
+						<= Density $mol_switch
+							value? <=> density? \comfortable
+							options *
+								comfortable @ \Comfortable
+								compact @ \Compact
+				<= Brand_field $mol_view
+					sub /
+						<= Brand_label $mol_view
+							sub /
+								<= brand_label_text @ \Brand
+						<= Brand $mol_switch
+							value? <=> brand?
+							options *
+								neutral @ \Neutral
+								example @ \Example
+								fleetbox @ \Fleetbox
+				<= Sample_note $mol_view
+					sub /
+						<= sample_note_text @ \Every figure, name and key on these pages is sample data.

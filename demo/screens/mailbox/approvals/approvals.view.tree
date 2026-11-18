@@ -1,0 +1,25 @@
+$airkit_demo_screens_mailbox_approvals $airkit_catalog
+	param \approval
+	menu_title @ \Approvals
+	menu_filter_enabled false
+	store $airkit_demo_screens_mailbox_store
+	Show_page* $airkit_demo_screens_mailbox_approvals_show
+		store <= store
+		message_id <= row_id* \
+		back_arg <= spread_close_arg
+	menu_body /
+		<= Columns $airkit_columns
+			titles /
+				<= columns_text @ \From
+				<= columns_text_1 @ \Received
+		<= Menu_links
+	menu_link_content* /
+		<= Row* $mol_row
+			minimal_height 24
+			sub /
+				<= From* $airkit_labeler_name
+					title @ \From
+					value <= row_from* \
+				<= At* $airkit_labeler_moment
+					title @ \Received
+					value <= row_at* \

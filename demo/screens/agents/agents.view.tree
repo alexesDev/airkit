@@ -1,0 +1,90 @@
+$airkit_demo_screens_agents $airkit_catalog
+	param \agent
+	menu_title @ \Agents
+	store $airkit_demo_screens_agents_store
+	status_filter? \active
+	query? \
+	actions /
+		<= Sample $airkit_pill
+			title @ \Sample data
+		<= Add_link $mol_link
+			arg *
+				agent \add
+			title @ \+ Add
+		<= Apply_link $mol_link
+			arg *
+				agent \apply
+			title @ \Apply
+	Show_page* $airkit_demo_screens_agents_show
+		store <= store
+		agent_id <= row_id* 0
+	Scope_page* $airkit_demo_screens_agents_scope
+		store <= store
+		form <= scope_form* \
+	Archive_confirm $airkit_confirmpage
+		title <= archive_title \
+		text <= archive_text \
+		confirm_title @ \Archive
+		cancel_arg *
+			confirm null
+		done_arg *
+			confirm null
+		run? <=> archive? null
+	Restore_confirm $airkit_confirmpage
+		title <= restore_title \
+		text <= restore_text \
+		confirm_title <= restore_confirm_title \
+		cancel_arg *
+			restore null
+		done_arg *
+			restore null
+		run? <=> restore? null
+	menu_body /
+		<= Controls $mol_view
+			sub /
+				<= Query $mol_search
+					hint @ \Search by name or description
+					query? <=> query?
+				<= Status_filter $airkit_chips
+					value? <=> status_filter?
+					options *
+						active @ \Active
+						running @ \Running
+						stopped @ \Stopped
+						archived @ \Archived
+					counts <= status_counts *number
+		<= Columns $airkit_columns
+			titles /
+				<= columns_text @ \ID
+				<= columns_text_1 @ \Name
+				<= columns_text_2 @ \Status
+				<= columns_text_3 @ \Bot
+				<= columns_text_4 @ \Created At
+		<= Menu_links
+	menu_link_content* /
+		<= Row* $mol_row
+			minimal_height 24
+			sub /
+				<= Id* $airkit_labeler_id
+					value <= row_id_string* \
+				<= Name* $mol_labeler
+					title @ \Name
+					content /
+						<= Name_title* $mol_view
+							sub /
+								<= row_name* \
+						<= Description* $mol_view
+							sub /
+								<= row_description* \
+				<= Status* $mol_labeler
+					title @ \Status
+					content /
+						<= Status_pill* $airkit_pill
+							tone <= row_tone* \neutral
+							title <= row_status* \
+				<= Bot* $airkit_labeler_name
+					title @ \Bot
+					value <= row_bot* \
+				<= Created* $airkit_labeler_moment
+					title @ \Created At
+					value <= row_created* \

@@ -1,0 +1,21 @@
+$airkit_feed $mol_list
+	entries /$airkit_feed_entry
+	rows <= items /
+	Item* $mol_view
+		minimal_height 36
+		sub /
+			<= Time* $mol_view
+				dom_name \time
+				sub /
+					<= item_time* \
+			<= Line* $mol_view
+				sub <= line* /
+					<= Who* $mol_view
+						sub /
+							<= item_who* \
+					<= State* $airkit_pill
+						tone <= item_tone* \neutral
+						title <= item_who*
+					<= What* $mol_view
+						sub /
+							<= item_what* \

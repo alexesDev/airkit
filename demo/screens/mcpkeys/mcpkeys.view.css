@@ -1,0 +1,18 @@
+[mol_book2] > [airkit_demo_screens_mcpkeys_menu] {
+	flex: 0 0 44rem;
+	--airkit_columns: minmax(8rem, 1fr) minmax(11rem, 1fr) 5.5rem 9rem;
+}
+
+[airkit_demo_screens_mcpkeys_name] [mol_labeler_content] {
+	font-weight: 600;
+}
+
+[airkit_demo_screens_mcpkeys_total] {
+	padding: .5rem .75rem;
+	color: var(--airkit_shade);
+	font-size: .875rem;
+}
+
+[mol_book2] > [airkit_demo_screens_mcpkeys_confirm_page] {
+	flex: 0 0 26rem;
+}

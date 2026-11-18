@@ -1,0 +1,100 @@
+$airkit_demo_screens_nodes_show $mol_page
+	node_name \
+	title <= node_name
+	tools /
+		<= Sample $airkit_pill
+			title @ \Sample data
+		<= Connect $mol_link
+			uri <= url \
+			title @ \Connect Codex account
+	body /
+		<= Fields $mol_view
+			sub /
+				<= Credential $mol_labeler
+					title @ \Codex credential
+					content /
+						<= Credential_pill $airkit_pill
+							tone <= credential_tone \neutral
+							title <= credential_text \
+				<= Observed $airkit_labeler_moment
+					title @ \Quota observed
+					value <= observed \
+		<= Windows $airkit_tiles
+			sub /
+				<= Primary $airkit_stat
+					label @ \Primary window
+					value <= primary_value \
+					unit \% used
+					note <= primary_note \
+					portion <= primary_portion -1
+					measured <= primary_measured true
+					not_measured_text <= primary_missing \
+				<= Secondary $airkit_stat
+					label @ \Secondary window
+					value <= secondary_value \
+					unit \% used
+					note <= secondary_note \
+					portion <= secondary_portion -1
+					measured <= secondary_measured true
+					not_measured_text <= secondary_missing \
+		<= Usage $airkit_section
+			title @ \Agents
+			content <= usage_content /
+	Columns $airkit_columns
+		titles /
+			<= columns_text @ \Agent
+			<= columns_text_1 @ \Share of subscription
+			<= columns_text_2 @ \Weekly limit
+			<= columns_text_3 @ \Model
+			<= columns_text_4 @ \Input tokens
+			<= columns_text_5 @ \Cached input
+			<= columns_text_6 @ \Output tokens
+			<= columns_text_7 @ \Reasoning tokens
+			<= columns_text_8 @ \Requests
+			<= columns_text_9 @ \Peak input
+	List $mol_list
+		rows <= agent_rows /
+	Empty $airkit_empty
+		title <= agents_text \
+	Agent_row* $mol_row
+		minimal_height 24
+		sub /
+			<= Agent* $airkit_labeler_name
+				title @ \Agent
+				value <= agent_name* \
+			<= Share* $mol_labeler
+				title @ \Share of subscription
+				content /
+					<= agent_share* \
+			<= Limit* $mol_labeler
+				title @ \Weekly limit
+				content /
+					<= agent_limit* \
+			<= Model* $mol_labeler
+				title @ \Model
+				content /
+					<= agent_model* \
+			<= Input* $mol_labeler
+				title @ \Input tokens
+				content /
+					<= agent_input* \
+			<= Cached* $mol_labeler
+				title @ \Cached input
+				content /
+					<= agent_cached* \
+			<= Output* $mol_labeler
+				title @ \Output tokens
+				content /
+					<= agent_output* \
+			<= Reasoning* $mol_labeler
+				title @ \Reasoning tokens
+				content /
+					<= agent_reasoning* \
+			<= Requests* $mol_labeler
+				title @ \Requests
+				content /
+					<= agent_requests* \
+			<= Peak* $mol_labeler
+				title @ \Peak input
+				content /
+					<= agent_peak* \

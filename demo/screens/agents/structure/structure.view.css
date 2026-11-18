@@ -1,0 +1,123 @@
+[airkit_demo_screens_agents_structure] {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+[airkit_demo_screens_agents_structure_agent] {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	padding: 1rem 1.125rem;
+	border-radius: .75rem;
+	background: var(--airkit_mid);
+}
+
+[airkit_demo_screens_agents_structure_agent_head] {
+	display: flex;
+	align-items: center;
+	gap: .75rem;
+}
+
+[airkit_demo_screens_agents_structure_agent_name] {
+	font-size: 1.0625rem;
+	font-weight: 650;
+}
+
+[airkit_demo_screens_agents_structure_agent_access] {
+	color: var(--airkit_shade);
+	font-size: .875rem;
+}
+
+[airkit_demo_screens_agents_structure_params] {
+	padding: .5rem 0 0;
+	margin: 0;
+	background: none;
+	max-width: none;
+}
+
+[airkit_demo_screens_agents_structure_cubes] {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+	gap: .75rem;
+}
+
+[airkit_demo_screens_agents_structure_cube] {
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: .375rem;
+	padding: .75rem .875rem;
+	border-radius: var(--airkit_radius);
+	background: var(--airkit_mid);
+}
+
+[airkit_demo_screens_agents_structure_cube_top] {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: .5rem;
+	width: 100%;
+}
+
+[airkit_demo_screens_agents_structure_cube_icons] {
+	display: flex;
+	gap: .125rem;
+	flex: none;
+}
+
+[airkit_demo_screens_agents_structure_cube_settings],
+[airkit_demo_screens_agents_structure_cube_open] {
+	padding: .375rem;
+	color: var(--airkit_accent);
+}
+
+[airkit_demo_screens_agents_structure_source] {
+	font-size: .8125rem;
+	color: var(--airkit_shade);
+}
+
+[airkit_demo_screens_agents_structure_cube_head] {
+	color: var(--airkit_shade);
+}
+
+[airkit_demo_screens_agents_structure_cube_head] {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+[airkit_demo_screens_agents_structure_cube_name]:empty {
+	display: none;
+}
+
+[airkit_demo_screens_agents_structure_cube_title] {
+	font-weight: 600;
+}
+
+[airkit_demo_screens_agents_structure_cube_name] {
+	font-family: var(--airkit_mono);
+	font-size: .75rem;
+	color: var(--airkit_shade);
+}
+
+[airkit_demo_screens_agents_structure_cube_hint] {
+	font-size: .8125rem;
+	line-height: 1.4;
+	color: var(--airkit_shade);
+}
+
+[airkit_demo_screens_agents_structure_cube_broken] {
+	font-size: .8125rem;
+	line-height: 1.4;
+	color: var(--airkit_bad);
+	overflow-wrap: anywhere;
+}
+
+[airkit_demo_screens_agents_structure_cube_state] {
+	align-self: flex-start;
+}

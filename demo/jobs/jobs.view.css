@@ -1,0 +1,12 @@
+[mol_book2] > [airkit_demo_jobs_menu] {
+	flex: 0 0 40rem;
+	--airkit_columns: minmax(11rem, 1fr) 6.5rem 7.5rem 6rem;
+}
+
+[airkit_demo_jobs_filter] {
+	padding: .25rem .75rem 0;
+}
+
+[airkit_demo_jobs_name] [mol_labeler_content] {
+	font-weight: 600;
+}

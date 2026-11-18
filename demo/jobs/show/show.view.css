@@ -1,0 +1,11 @@
+[mol_book2] > [airkit_demo_jobs_show] {
+	flex: 1 1 36rem;
+}
+
+[airkit_demo_jobs_show_body_content] {
+	max-width: 44rem;
+}
+
+[airkit_demo_jobs_show_body_content] > [mol_view] {
+	max-width: none;
+}

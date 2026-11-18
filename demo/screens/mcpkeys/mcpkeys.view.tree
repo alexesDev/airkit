@@ -1,0 +1,60 @@
+$airkit_demo_screens_mcpkeys $airkit_catalog
+	param \mcpkey
+	menu_title @ \MCP keys
+	menu_filter_enabled false
+	store $airkit_demo_screens_mcpkeys_store
+	actions /
+		<= Sample $airkit_pill
+			title @ \Sample data
+		<= Add $mol_link
+			hint @ \New key
+			arg *
+				mcpkey \add
+			sub /
+				<= Add_icon $mol_icon_plus
+	Create_page $airkit_demo_screens_mcpkeys_create
+		store <= store
+	Show_page* $airkit_demo_screens_mcpkeys_show
+		store <= store
+		mcp_key_id <= row_key_id* 0
+	Confirm_page* $airkit_confirmpage
+		title <= confirm_page_title* \
+		text <= confirm_text* \
+		confirm_title <= confirm_button* \
+		cancel_arg *
+			confirm null
+		done_arg <= confirm_done_arg* *
+		run? <=> confirm_run*? null
+	menu_body /
+		<= Columns $airkit_columns
+			titles /
+				<= columns_text @ \Name
+				<= columns_text_1 @ \Owner
+				<= columns_text_2 @ \Status
+				<= columns_text_3 @ \Created
+		<= Menu_links
+	menu_foot /
+		<= Total $mol_view
+			sub /
+				<= total_text \
+	menu_link_content* /
+		<= Row* $mol_row
+			minimal_height 24
+			sub /
+				<= Name* $airkit_labeler_name
+					value <= row_name* \
+				<= Owner* $airkit_labeler_name
+					title @ \Owner
+					value <= row_owner* \
+				<= Status* $mol_labeler
+					title @ \Status
+					content /
+						<= Status_pill* $airkit_pill
+							tone <= row_tone* \neutral
+							title <= row_status* \
+				<= Created* $airkit_labeler_moment
+					title @ \Created
+					value <= row_created* \
+	Menu_links_empty <= Empty $airkit_empty
+		title @ \No keys yet.
+		text @ \A key lets an MCP client call this panel's API as you.

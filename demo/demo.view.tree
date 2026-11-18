@@ -1,0 +1,34 @@
+$airkit_demo $airkit_demo_shell
+	menu_title @ \airkit
+	Spread_default <= Gallery
+	spreads *
+		gallery <= Gallery $airkit_demo_gallery
+		dashboard <= Dashboard $airkit_demo_dashboard
+		keys <= Keys $airkit_demo_keys
+			close_icon <= Spread_close
+		jobs <= Jobs $airkit_demo_jobs
+			close_icon <= Spread_close
+		panel_dashboard <= Panel_dashboard $airkit_demo_screens_dashboard
+		panel_agents <= Panel_agents $airkit_demo_screens_agents
+			close_icon <= Spread_close
+		panel_nodes <= Panel_nodes $airkit_demo_screens_nodes
+			close_icon <= Spread_close
+		panel_auditlog <= Panel_auditlog $airkit_demo_screens_auditlog
+		mailbox <= Mailbox $airkit_demo_screens_mailbox
+			close_icon <= Spread_close
+		datajobs <= Datajobs $airkit_demo_screens_scrapeq
+			close_icon <= Spread_close
+		mcpkeys <= Mcpkeys $airkit_demo_screens_mcpkeys
+			close_icon <= Spread_close
+	spread_names *
+		gallery @ \Components
+		dashboard @ \Dashboard pattern
+		keys @ \API keys pattern
+		jobs @ \Jobs pattern
+		panel_dashboard @ \Panel · Dashboard
+		panel_agents @ \Panel · Agents
+		panel_nodes @ \Panel · Nodes
+		panel_auditlog @ \Panel · Audit log
+		mailbox @ \Mailbox · Owner
+		datajobs @ \Data jobs · Jobs
+		mcpkeys @ \Starterkit · MCP keys

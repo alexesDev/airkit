@@ -1,0 +1,13 @@
+$airkit_section $mol_section
+	title_dom_name \h2
+	note \
+	link_title \
+	link_arg *
+	head <= head_parts /
+		<= Title
+		<= Note $mol_view
+			sub /
+				<= note
+		<= Link $mol_link
+			arg <= link_arg
+			title <= link_title

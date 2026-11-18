@@ -1,0 +1,14 @@
+[airkit_spark] {
+	display: block;
+	width: 100%;
+	height: 2rem;
+	margin-top: .5rem;
+	color: var(--airkit_accent);
+	flex: none;
+}
+
+[airkit_spark_line] {
+	stroke-width: 1.6px;
+	stroke-linejoin: round;
+	color: var(--airkit_accent);
+}

@@ -1,0 +1,6 @@
+$airkit_demo_screens_dashboard_chart $airkit_chart
+	selected_index -1
+	Cursor $mol_plot_graph
+		sub /
+			<= Cursor_line $mol_svg_path
+				geometry <= cursor_curve \

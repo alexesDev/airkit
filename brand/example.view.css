@@ -1,0 +1,41 @@
+[airkit_air][airkit_brand="example"][mol_theme="$mol_theme_light"] {
+	--airkit_ground: oklch(94% .012 175);
+	--airkit_mid: oklch(97.2% .007 175);
+	--airkit_card: oklch(99.6% .002 175);
+	--airkit_text: oklch(21% .015 200);
+	--airkit_shade: oklch(46% .02 200);
+	--airkit_faint: oklch(62% .015 200);
+	--airkit_hover: oklch(50% .08 175 / .07);
+	--airkit_accent: oklch(47% .1 175);
+	--airkit_accent_strong: oklch(38% .1 175);
+	--airkit_on_accent: oklch(99% 0 0);
+	--airkit_selected: oklch(47% .1 175 / .12);
+	--airkit_pick: oklch(47% .1 175 / .05);
+	--airkit_focus: oklch(55% .13 175);
+	--airkit_series_1: oklch(50% .1 175);
+	--airkit_series_2: oklch(68% .08 140);
+	--airkit_series_3: oklch(58% .1 230);
+	--airkit_series_4: oklch(74% .07 95);
+	--airkit_series_5: oklch(72% .01 200);
+}
+
+[airkit_air][airkit_brand="example"][mol_theme="$mol_theme_dark"] {
+	--airkit_ground: oklch(15% .01 200);
+	--airkit_mid: oklch(18% .01 200);
+	--airkit_card: oklch(21.5% .012 200);
+	--airkit_text: oklch(93% .006 175);
+	--airkit_shade: oklch(73% .015 175);
+	--airkit_faint: oklch(57% .012 175);
+	--airkit_hover: oklch(80% .08 175 / .07);
+	--airkit_accent: oklch(80% .1 175);
+	--airkit_accent_strong: oklch(88% .08 175);
+	--airkit_on_accent: oklch(18% .02 200);
+	--airkit_selected: oklch(80% .1 175 / .14);
+	--airkit_pick: oklch(80% .1 175 / .06);
+	--airkit_focus: oklch(80% .1 175);
+	--airkit_series_1: oklch(74% .1 175);
+	--airkit_series_2: oklch(76% .08 140);
+	--airkit_series_3: oklch(70% .1 230);
+	--airkit_series_4: oklch(80% .07 95);
+	--airkit_series_5: oklch(60% .01 200);
+}

@@ -1,0 +1,18 @@
+$airkit_demo_screens_mcpkeys_show $mol_page
+	store $airkit_demo_screens_mcpkeys_store
+	mcp_key_id 0
+	title <= name \
+	tools <= actions /
+		<= Revoke $mol_link
+			title @ \Revoke
+			arg *
+				confirm \revoke
+		<= Delete $mol_link
+			title @ \Delete
+			arg *
+				confirm \delete
+	body /
+		<= Card $airkit_kv
+			fields <= fields *string
+		<= Status $mol_status
+			message <= message? \

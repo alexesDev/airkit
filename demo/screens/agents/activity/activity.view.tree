@@ -1,0 +1,24 @@
+$airkit_demo_screens_agents_activity $airkit_section
+	store $airkit_demo_screens_agents_store
+	agent_id 0
+	title @ \Activity
+	content /
+		<= Period $mol_switch
+			options *
+				hours @ \48 hours
+				days @ \30 days
+				weeks @ \26 weeks
+				months @ \12 months
+			value? <=> period? \days
+		<= Messages $airkit_chart
+			total_digits 0
+			series <= messages /$airkit_chart_series
+			labels <= labels /string
+		<= Tokens $airkit_chart
+			total_digits 2
+			series <= tokens /$airkit_chart_series
+			labels <= labels /string
+		<= Cached $airkit_chart
+			total_digits 2
+			series <= cached /$airkit_chart_series
+			labels <= labels /string

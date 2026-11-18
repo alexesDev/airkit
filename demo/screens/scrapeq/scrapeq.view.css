@@ -1,0 +1,8 @@
+[mol_book2] > [airkit_demo_screens_scrapeq_menu] {
+	flex: 0 0 56rem;
+	--airkit_columns: minmax(8rem, 1fr) 5rem 6rem 6rem 4rem 4.5rem 6.5rem;
+}
+
+[airkit_demo_screens_scrapeq_id] [mol_labeler_content] {
+	font-weight: 600;
+}

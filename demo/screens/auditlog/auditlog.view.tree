@@ -1,0 +1,38 @@
+$airkit_demo_screens_auditlog $mol_page
+	title @ \Audit log
+	page_size 50
+	store $airkit_demo_screens_auditlog_store
+	tools /
+		<= Sample $airkit_pill
+			title @ \Sample data
+	body /
+		<= Columns $airkit_columns
+			sticky true
+			titles /
+				<= columns_text @ \At
+				<= columns_text_1 @ \Action
+				<= columns_text_2 @ \Email
+				<= columns_text_3 @ \Detail
+		<= List $mol_list
+			rows <= rows /
+		<= More $mol_button_minor
+			title @ \Show more
+			click? <=> more? null
+	Row* $mol_row
+		minimal_height 24
+		sub /
+			<= Created* $airkit_labeler_moment
+				title @ \At
+				value <= row_created* \
+			<= Action* $mol_labeler
+				title @ \Action
+				content /
+					<= row_action* \
+			<= Email* $mol_labeler
+				title @ \Email
+				content /
+					<= row_email* \
+			<= Detail* $mol_labeler
+				title @ \Detail
+				content /
+					<= row_detail* \

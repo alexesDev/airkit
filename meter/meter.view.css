@@ -1,0 +1,33 @@
+[airkit_meter] {
+	position: relative;
+	display: block;
+	height: .375rem;
+	border-radius: 1rem;
+	background: var(--airkit_idle_tint);
+	margin-top: .625rem;
+}
+
+[airkit_meter_fill] {
+	position: absolute;
+	inset: 0 auto 0 0;
+	border-radius: 1rem;
+	background: var(--airkit_accent);
+}
+
+[airkit_meter_tone="warn"] > [airkit_meter_fill] {
+	background: var(--airkit_warn);
+}
+
+[airkit_meter_tone="bad"] > [airkit_meter_fill] {
+	background: var(--airkit_bad);
+}
+
+[airkit_meter_tick] {
+	position: absolute;
+	top: -.1875rem;
+	bottom: -.1875rem;
+	width: 2px;
+	margin-left: -1px;
+	background: var(--airkit_text);
+	opacity: .55;
+}

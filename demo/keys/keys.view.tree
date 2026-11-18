@@ -1,0 +1,57 @@
+$airkit_demo_keys $airkit_catalog
+	param \key
+	menu_title @ \API keys
+	store $airkit_demo_keys_store
+	actions /
+		<= Sample $airkit_pill
+			title @ \Sample data
+		<= Add $mol_link
+			title @ \Create key
+			arg *
+				key \add
+	Show* $airkit_demo_keys_show
+		store <= store
+		key_id <= key_id* \
+	Create $airkit_demo_keys_create
+		store <= store
+	Revoke* $airkit_confirmpage
+		title <= revoke_title* \
+		text <= revoke_text* \
+		confirm_title @ \Revoke
+		cancel_arg *
+			key_confirm null
+		done_arg *
+			key_confirm null
+		run? <=> revoke*? null
+	menu_body /
+		<= Columns $airkit_columns
+			titles /
+				<= columns_text @ \Name
+				<= columns_text_1 @ \Status
+				<= columns_text_2 @ \Owner
+				<= columns_text_3 @ \Last used
+		<= Menu_links
+	menu_link_content* /
+		<= Row* $mol_row
+			minimal_height 24
+			sub /
+				<= Name* $airkit_labeler_name
+					value <= row_name* \
+				<= Status* $mol_labeler
+					title @ \Status
+					content /
+						<= Status_pill* $airkit_pill
+							tone <= row_tone* \neutral
+							title <= row_status* \
+				<= Owner* $airkit_labeler_name
+					title @ \Owner
+					value <= row_owner* \
+				<= Used* $airkit_labeler_moment
+					title @ \Last used
+					value <= row_used* \
+	Menu_links_empty <= Empty $airkit_empty
+		title @ \No keys yet
+		text @ \A key lets a script call the API on your behalf. It is shown once, when it is created.
+		action_title @ \Create key
+		action_arg *
+			key \add

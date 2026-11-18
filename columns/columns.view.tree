@@ -1,0 +1,11 @@
+$airkit_columns $mol_view
+	titles /string
+	sticky false
+	attr *
+		^
+		aria-hidden \true
+		airkit_columns_sticky <= sticky
+	sub <= cells /
+	Cell* $mol_view
+		sub /
+			<= cell_title* \

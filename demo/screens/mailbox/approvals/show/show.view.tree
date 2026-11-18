@@ -1,0 +1,27 @@
+$airkit_demo_screens_mailbox_approvals_show $mol_page
+	store $airkit_demo_screens_mailbox_store
+	message_id \
+	title <= page_title \
+	tools /
+		<= Back $mol_link
+			arg <= back_arg *
+			sub /
+				<= back_text @ \Back to approvals
+		<= Approve $mol_button_major
+			title @ \Approve
+			enabled <= actions_enabled false
+			click? <=> approve? null
+		<= Reject $mol_button_minor
+			title @ \Reject
+			enabled <= actions_enabled
+			click? <=> reject? null
+	body /
+		<= Status $mol_status
+			message <= message \
+		<= Meta $airkit_kv
+			fields <= meta *string
+		<= Body_section $airkit_section
+			title @ \Body
+			content /
+				<= Body_text $mol_text
+					text <= letter_body \

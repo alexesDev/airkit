@@ -1,0 +1,67 @@
+[airkit_columns] {
+	display: grid;
+	grid-template-columns: var(--airkit_columns);
+	gap: 1.5rem;
+	padding: 1rem .75rem .25rem;
+	font-size: .75rem;
+	font-weight: 500;
+	letter-spacing: .02em;
+	color: var(--airkit_shade);
+}
+
+[airkit_columns] ~ [mol_list] [mol_row] {
+	display: grid;
+	grid-template-columns: var(--airkit_columns);
+	gap: 1.5rem;
+	align-items: center;
+	width: 100%;
+}
+
+[airkit_columns] ~ [mol_list] [mol_labeler] {
+	min-width: 0;
+}
+
+[airkit_columns] ~ [mol_list] [mol_labeler_content] {
+	padding: 0;
+	display: block;
+	overflow-wrap: break-word;
+}
+
+[airkit_columns] ~ [mol_list] [mol_labeler_label] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+[airkit_columns_sticky="true"] {
+	position: sticky;
+	top: -.25rem;
+	z-index: 1;
+	animation: airkit_columns_lift linear both;
+	animation-timeline: scroll(nearest block);
+	animation-range: 0 1.5rem;
+}
+
+[mol_page] [airkit_columns] {
+	background: var(--airkit_mid);
+}
+
+[mol_book2] > [mol_page]:nth-last-child(1 of [mol_page]) [airkit_columns] {
+	background: var(--airkit_card);
+}
+
+:is([airkit_air][mol_book2], [airkit_air] [mol_book2]) > [mol_page]:first-child [airkit_columns] {
+	background: var(--airkit_ground);
+}
+
+@keyframes airkit_columns_lift {
+	from {
+		box-shadow: 0 0 0 0 transparent;
+	}
+	to {
+		box-shadow: 0 .5rem .75rem -.5rem oklch(0% 0 0 / .35);
+	}
+}

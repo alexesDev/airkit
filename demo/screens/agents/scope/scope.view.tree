@@ -1,0 +1,15 @@
+$airkit_demo_screens_agents_scope $mol_page
+	store $airkit_demo_screens_agents_store
+	form \
+	title <= page_title \
+	tools /
+		<= Sample $airkit_pill
+			title @ \Sample data
+		<= Cancel $mol_link
+			title @ \Cancel
+			arg *
+				agent null
+	body /
+		<= Out $airkit_empty
+			title @ \Not in this demo
+			text <= out_text \

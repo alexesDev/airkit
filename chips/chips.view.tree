@@ -1,0 +1,9 @@
+$airkit_chips $mol_switch
+	counts *number
+	option_label* /
+		<= Option_title* $mol_view
+			sub /
+				<= option_title*
+		<= Option_count* $mol_view
+			sub /
+				<= option_count* \

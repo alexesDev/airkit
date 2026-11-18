@@ -1,0 +1,60 @@
+$airkit_demo_screens_agents_parts $mol_view
+	store $airkit_demo_screens_agents_store
+	agent_id 0
+	sub /
+		<= Columns $airkit_columns
+			titles /
+				<= columns_text @ \Part
+				<= columns_text_1 @ \State
+				<= columns_text_2 @ \Where
+				<= columns_text_3 @ \Reserved
+				\
+				\
+		<= List $mol_list
+			rows <= rows /
+	Row* $mol_row
+		minimal_height 24
+		sub /
+			<= Name* $mol_labeler
+				title @ \Part
+				content /
+					<= Part_title* $mol_view
+						sub /
+							<= part_title* \
+					<= Part_internal* $mol_view
+						sub /
+							<= part_internal* \
+			<= State* $mol_labeler
+				title @ \State
+				content <= state_content* /
+			<= Where* $airkit_labeler_name
+				title @ \Where
+				value <= part_where* \
+			<= Reserved* $airkit_labeler_name
+				title @ \Reserved
+				value <= part_reserved* \
+			<= Open* $mol_labeler
+				title @ \Open
+				content <= open_content* /
+			<= Settings* $mol_labeler
+				title @ \Settings
+				content /
+					<= Settings_link* $mol_link
+						arg *
+							agent \settings
+							settings <= id_string \
+							group <= part_group* \
+						title <= part_settings_title* \
+	State_pill* $airkit_pill
+		tone <= part_tone* \neutral
+		title <= part_state* \
+	State_detail* $mol_view
+		sub /
+			<= part_detail* \
+	Open_link* $mol_link
+		uri <= part_uri* \
+		target \_blank
+		title @ \Open
+	Open_later* $mol_view
+		sub /
+			\opens when the agent runs

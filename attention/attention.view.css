@@ -1,0 +1,74 @@
+[airkit_attention] {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin: 0 -.75rem 2rem;
+}
+
+[airkit_attention] > [airkit_attention_item] {
+	display: flex;
+	align-items: baseline;
+	gap: .75rem;
+	padding: .625rem .75rem;
+	border-radius: var(--airkit_radius);
+	color: var(--airkit_text);
+}
+
+[airkit_attention_item]:hover {
+	background: var(--airkit_hover);
+}
+
+[airkit_attention_count] {
+	min-width: 1.5rem;
+	text-align: right;
+	font-size: 1.25rem;
+	font-weight: 650;
+	font-variant-numeric: tabular-nums;
+}
+
+[airkit_attention_tone="bad"] {
+	color: var(--airkit_bad);
+}
+
+[airkit_attention_tone="warn"] {
+	color: var(--airkit_warn);
+}
+
+[airkit_attention_text] {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 0;
+}
+
+[airkit_attention_what] {
+	font-weight: 500;
+}
+
+[airkit_attention_why] {
+	color: var(--airkit_shade);
+	font-size: .875rem;
+}
+
+[airkit_attention_go] {
+	color: var(--airkit_accent);
+	font-weight: 500;
+	font-size: .875rem;
+	white-space: nowrap;
+}
+
+[airkit_attention_calm] {
+	display: flex;
+	align-items: center;
+	gap: .625rem;
+	padding: .625rem .75rem;
+	color: var(--airkit_shade);
+}
+
+[airkit_attention_calm]::before {
+	content: "";
+	width: .5rem;
+	height: .5rem;
+	border-radius: 50%;
+	background: var(--airkit_ok);
+}

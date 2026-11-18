@@ -1,0 +1,28 @@
+[airkit_problem] {
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+	padding: .75rem 1rem;
+	border-radius: var(--airkit_radius);
+	background: var(--airkit_bad_tint);
+	max-width: 34rem;
+	margin-bottom: 1.5rem;
+}
+
+[airkit_problem_tone="warn"] {
+	background: var(--airkit_warn_tint);
+}
+
+[airkit_problem_title] {
+	color: var(--airkit_bad);
+	font-weight: 600;
+}
+
+[airkit_problem_tone="warn"] > [airkit_problem_title] {
+	color: var(--airkit_warn);
+}
+
+[airkit_problem_text] {
+	font-size: .875rem;
+	line-height: 1.5;
+}

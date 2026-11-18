@@ -1,0 +1,11 @@
+$airkit_kv $mol_view
+	fields *string
+	sub <= pairs /
+	Pair* $mol_view
+		sub /
+			<= Key* $mol_view
+				sub /
+					<= key* \
+			<= Value* $mol_view
+				sub /
+					<= field_value* \

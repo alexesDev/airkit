@@ -1,0 +1,57 @@
+$airkit_demo_screens_scrapeq $airkit_catalog
+	param \scrapeq_job
+	menu_title @ \Jobs
+	menu_filter_enabled false
+	store $airkit_demo_screens_scrapeq_store
+	actions /
+		<= Sample $airkit_pill
+			title @ \Sample data
+	Show_page* $airkit_demo_screens_scrapeq_show
+		store <= store
+		job_id <= row_id* \
+		close_icon <= Spread_close
+	menu_body /
+		<= Columns $airkit_columns
+			titles /
+				<= columns_text @ \Job
+				<= columns_text_1 @ \Type
+				<= columns_text_2 @ \Schedule
+				<= columns_text_3 @ \Status
+				<= columns_text_4 @ \Paused
+				<= columns_text_5 @ \Last run
+				<= columns_text_6 @ \Last run at
+		<= Menu_links
+	menu_link_content* /
+		<= Row* $mol_row
+			minimal_height 24
+			sub /
+				<= Id* $airkit_labeler_name
+					title @ \Job
+					value <= job_name* \
+				<= Type* $airkit_labeler_name
+					title @ \Type
+					value <= job_type* \
+				<= Schedule* $airkit_labeler_name
+					title @ \Schedule
+					value <= job_schedule* \
+				<= Status* $mol_labeler
+					title @ \Status
+					content /
+						<= Status_pill* $airkit_pill
+							tone <= job_tone* \neutral
+							title <= job_status* \
+				<= Paused* $airkit_labeler_name
+					title @ \Paused
+					value <= job_paused* \
+				<= Last_run* $mol_labeler
+					title @ \Last run
+					content /
+						<= Last_run_pill* $airkit_pill
+							tone <= job_last_tone* \neutral
+							title <= job_last_run* \
+				<= Last_at* $airkit_labeler_moment
+					title @ \Last run at
+					value <= job_last_at* \
+	Menu_links_empty <= Empty $airkit_empty
+		title @ \No jobs yet.
+		text @ \The agent saves one with upsertJob.

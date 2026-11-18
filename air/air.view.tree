@@ -1,0 +1,5 @@
+$airkit_air $mol_plugin
+	density \comfortable
+	attr *
+		airkit_air \
+		airkit_air_density <= density

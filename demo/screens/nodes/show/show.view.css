@@ -1,0 +1,37 @@
+[mol_book2] > [airkit_demo_screens_nodes_show] {
+	flex: 1 1 64rem;
+	min-width: 62rem;
+	--airkit_columns: minmax(7rem, 1.2fr) 5rem 3.5rem 4rem repeat(6, minmax(4.5rem, 1fr));
+}
+
+[airkit_demo_screens_nodes_show_body_content] > * {
+	max-width: 72rem;
+}
+
+[airkit_demo_screens_nodes_show_fields] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem 2.5rem;
+	padding: .75rem 1.125rem;
+	border-radius: .75rem;
+	background: var(--airkit_mid);
+	margin-bottom: .75rem;
+}
+
+[airkit_demo_screens_nodes_show_agent] [mol_labeler_content] {
+	font-weight: 600;
+}
+
+[airkit_demo_screens_nodes_show_list] > [airkit_demo_screens_nodes_show_agent_row][mol_row] {
+	padding: .5rem .75rem;
+}
+
+[airkit_demo_screens_nodes_show_agent_row] [mol_labeler]:not([airkit_demo_screens_nodes_show_agent]) [mol_labeler_content] {
+	font-size: .8125rem;
+	font-variant-numeric: tabular-nums;
+}
+
+[airkit_demo_screens_nodes_show_columns],
+[airkit_demo_screens_nodes_show_list] > [airkit_demo_screens_nodes_show_agent_row][mol_row] {
+	gap: .75rem;
+}

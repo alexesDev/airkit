@@ -1,0 +1,27 @@
+$airkit_demo_screens_scrapeq_run $mol_page
+	store $airkit_demo_screens_scrapeq_store
+	job_id \
+	run_id \
+	close_icon null $mol_view
+	title <= page_title \
+	tools /
+		<= close_icon
+	body /
+		<= Meta $airkit_kv
+			fields <= meta *string
+		<= Retried $mol_paragraph
+			title <= retried \
+		<= Error $airkit_section
+			title @ \Error
+			content /
+				<= Error_text $mol_view
+					dom_name \pre
+					sub /
+						<= error \
+		<= Stderr $airkit_section
+			title @ \Stderr, its last part
+			content /
+				<= Stderr_text $mol_view
+					dom_name \pre
+					sub /
+						<= stderr \

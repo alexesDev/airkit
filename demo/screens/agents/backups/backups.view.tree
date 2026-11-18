@@ -1,0 +1,74 @@
+$airkit_demo_screens_agents_backups $airkit_section
+	store $airkit_demo_screens_agents_store
+	agent_id 0
+	title @ \Backups
+	content /
+		<= Note $mol_paragraph
+			title @ \Capturing briefly stops the agent, then resumes its desired state. Exports include files and credentials. Anyone with the link can download them until it expires; downloaded copies remain usable.
+		<= Message $mol_status
+			message <= message? \
+		<= Schedule $mol_row
+			sub /
+				<= Enabled $mol_switch
+					options *
+						on @ \Daily backup
+						off @ \Manual only
+					value? <=> schedule_enabled? \on
+				<= Time $mol_string
+					hint @ \HH:MM UTC
+					value? <=> schedule_time? \03:00
+				<= Save $mol_button_minor
+					title @ \Save schedule (UTC)
+					click? <=> save? null
+		<= Actions $mol_row
+			sub /
+				<= Backup $mol_button_major
+					title @ \Back up now
+					enabled <= can_capture false
+					click? <=> capture? null
+				<= Export $mol_button_minor
+					title @ \Create backup and export
+					enabled <= can_capture false
+					click? <=> export_new? null
+				<= Ttl $mol_switch
+					options *
+						900 \Link: 15 minutes
+						3600 \1 hour
+						86400 \24 hours
+					value? <=> ttl? \3600
+		<= Export_status $mol_paragraph
+			title <= export_status \
+		<= Export_link $mol_link
+			uri <= export_uri \
+			title <= export_title \
+		<= History $mol_list
+			rows <= history_rows /
+	History_row* $mol_view
+		minimal_height 40
+		sub /
+			<= Summary* $mol_view
+				sub /
+					<= Number* $mol_view
+						sub /
+							<= number* \
+					<= State* $airkit_pill
+						tone <= state_tone* \neutral
+						title <= state* \
+					<= Details* $mol_view
+						sub /
+							<= details* \
+			<= Row_actions* $mol_view
+				sub /
+					<= Export_existing* $mol_button_minor
+						title @ \Export this backup
+						enabled <= can_export* false
+						click? <=> export_existing*? null
+					<= Restore_slot* $mol_view
+						sub <= restore_slot* /
+	Restore* $mol_link
+		title @ \Restore this backup
+		arg *
+			restore <= restore_arg* \
+	Restore_off* $mol_button_minor
+		title @ \Restore this backup
+		enabled false

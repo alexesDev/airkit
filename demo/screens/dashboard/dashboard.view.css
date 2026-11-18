@@ -1,0 +1,93 @@
+[mol_book2] > [airkit_demo_screens_dashboard] {
+	flex: 1 1 64rem;
+	--airkit_columns: minmax(7rem, .6fr) 4.5rem minmax(16rem, 1.6fr) minmax(8rem, .8fr) minmax(14rem, 1.4fr);
+}
+
+[airkit_demo_screens_dashboard_body] > * {
+	max-width: 64rem;
+}
+
+[airkit_demo_screens_dashboard_needs] {
+	padding-top: 0;
+	margin-bottom: 1rem;
+}
+
+[airkit_demo_screens_dashboard_metric] {
+	align-self: flex-start;
+	margin-bottom: .5rem;
+}
+
+[airkit_demo_screens_dashboard_chart] {
+	margin-bottom: .75rem;
+}
+
+[airkit_demo_screens_dashboard_breakdown] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .25rem 1.5rem;
+	min-height: 6rem;
+	align-content: flex-start;
+	font-size: .875rem;
+}
+
+[airkit_demo_screens_dashboard_breakdown_title] {
+	flex: 1 0 100%;
+	font-weight: 600;
+}
+
+[airkit_demo_screens_dashboard_breakdown_empty] {
+	color: var(--airkit_shade);
+}
+
+[airkit_demo_screens_dashboard_share] {
+	display: flex;
+	align-items: center;
+	gap: .4rem;
+}
+
+[airkit_demo_screens_dashboard_share_color] {
+	width: .625rem;
+	height: .625rem;
+	border-radius: .1875rem;
+}
+
+[airkit_demo_screens_dashboard_share_value] {
+	color: var(--airkit_shade);
+	font-variant-numeric: tabular-nums;
+}
+
+[airkit_demo_screens_dashboard_link_row] {
+	align-items: baseline;
+	gap: .25rem 1rem;
+}
+
+[airkit_demo_screens_dashboard_link] {
+	font-weight: 600;
+}
+
+[airkit_demo_screens_dashboard_link_description] {
+	color: var(--airkit_shade);
+}
+
+[airkit_demo_screens_dashboard_image_name] [mol_labeler_content] {
+	font-weight: 600;
+}
+
+[airkit_demo_screens_dashboard_image_command] [mol_labeler_content] {
+	font-family: var(--airkit_mono);
+	font-size: .8125rem;
+}
+
+[airkit_demo_screens_dashboard_image_ref] [mol_labeler_content] {
+	font-family: var(--airkit_mono);
+	font-size: .8125rem;
+}
+
+[airkit_columns] ~ [mol_list] [airkit_demo_screens_dashboard_image_problem] [mol_labeler_content] {
+	overflow-wrap: break-word;
+	font-size: .875rem;
+}
+
+[airkit_demo_screens_dashboard_image_list] > [airkit_demo_screens_dashboard_image_row][mol_row] {
+	padding: .5rem .75rem;
+}

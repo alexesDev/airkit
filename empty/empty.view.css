@@ -1,0 +1,30 @@
+[airkit_empty] {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: .5rem;
+	padding: 1.5rem 0;
+	max-width: 30rem;
+}
+
+[airkit_empty_title] {
+	font-weight: 600;
+}
+
+[airkit_empty_text] {
+	color: var(--airkit_shade);
+	font-size: .9375rem;
+	line-height: 1.55;
+}
+
+[airkit_empty] > [airkit_empty_action] {
+	margin-top: .5rem;
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--airkit_ctl);
+	padding: 0 1.25rem;
+	border-radius: var(--airkit_radius);
+	background: var(--airkit_accent);
+	color: var(--airkit_on_accent);
+	font-weight: 600;
+}

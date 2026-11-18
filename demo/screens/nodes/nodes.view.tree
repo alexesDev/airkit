@@ -1,0 +1,46 @@
+$airkit_demo_screens_nodes $airkit_catalog
+	param \node
+	menu_title @ \Nodes
+	actions /
+		<= Sample $airkit_pill
+			title @ \Sample data
+	Show* $airkit_demo_screens_nodes_show
+		node_name <= node_name* \
+	menu_body /
+		<= Columns $airkit_columns
+			titles /
+				<= columns_text @ \Node
+				<= columns_text_1 @ \Codex credential
+				<= columns_text_2 @ \Primary window
+				<= columns_text_3 @ \Secondary window
+				<= columns_text_4 @ \Quota observed
+				<= columns_text_5 @ \Agents
+		<= Menu_links
+	menu_link_content* /
+		<= Row* $mol_row
+			minimal_height 24
+			sub /
+				<= Name* $airkit_labeler_name
+					title @ \Node
+					value <= row_name* \
+				<= Credential* $mol_labeler
+					title @ \Codex credential
+					content /
+						<= Credential_pill* $airkit_pill
+							tone <= row_tone* \neutral
+							title <= row_credential* \
+				<= Primary* $mol_labeler
+					title @ \Primary window
+					content /
+						<= row_primary* \
+				<= Secondary* $mol_labeler
+					title @ \Secondary window
+					content /
+						<= row_secondary* \
+				<= Observed* $airkit_labeler_moment
+					title @ \Quota observed
+					value <= row_observed* \
+				<= Agents* $mol_labeler
+					title @ \Agents
+					content /
+						<= row_agents* \

@@ -1,0 +1,19 @@
+$airkit_meter $mol_view
+	portion 0
+	tick -1
+	tone \neutral
+	minimal_height 12
+	attr *
+		^
+		role \meter
+		aria-valuemin 0
+		aria-valuemax 100
+		aria-valuenow <= percent 0
+		airkit_meter_tone <= tone
+	sub <= parts /
+		<= Fill $mol_view
+			style *
+				width <= fill_width \0%
+		<= Tick $mol_view
+			style *
+				left <= tick_left \0%

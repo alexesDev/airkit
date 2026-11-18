@@ -1,0 +1,4 @@
+$airkit_labeler_id $mol_labeler
+	title \ID
+	content /
+		<= value \id

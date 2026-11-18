@@ -1,0 +1,8 @@
+$airkit_demo_screens_mailbox_overview $mol_page
+	title @ \Overview
+	approvals_waiting 0
+	approvals_arg *
+	body /
+		<= Attention $airkit_attention
+			calm_text @ \Nothing waits for you.
+			entries <= entries /$airkit_attention_entry

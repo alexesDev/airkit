@@ -1,0 +1,18 @@
+$airkit_demo_screens_mailbox $airkit_catalog
+	param \mailbox_nav
+	menu_title @ \Mailbox
+	store $airkit_demo_screens_mailbox_store
+	actions /
+		<= Sample $airkit_pill
+			title @ \Sample data
+	Spread_default <= Overview
+	spreads *
+		overview <= Overview $airkit_demo_screens_mailbox_overview
+			approvals_waiting <= approvals_waiting 0
+			approvals_arg <= approvals_arg *
+		approvals <= Approvals $airkit_demo_screens_mailbox_approvals
+			store <= store
+			close_icon <= Spread_close
+	Menu_link_count* $airkit_pill
+		tone \warn
+		title <= menu_link_count* \

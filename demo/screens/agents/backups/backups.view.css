@@ -1,0 +1,87 @@
+[airkit_demo_screens_agents_backups_note] {
+	color: var(--airkit_shade);
+	font-size: .875rem;
+	line-height: 1.5;
+	max-width: 44rem;
+	padding: 0 0 .75rem;
+}
+
+[airkit_demo_screens_agents_backups_schedule],
+[airkit_demo_screens_agents_backups_actions] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .5rem;
+	padding: 0 0 .75rem;
+}
+
+[airkit_demo_screens_agents_backups_enabled],
+[airkit_demo_screens_agents_backups_ttl] {
+	flex: none;
+}
+
+[airkit_demo_screens_agents_backups_time] {
+	flex: 0 0 8rem;
+}
+
+[airkit_demo_screens_agents_backups_export_status] {
+	padding: 0 0 .25rem;
+}
+
+[airkit_demo_screens_agents_backups_export_link] {
+	color: var(--airkit_accent);
+	padding: 0 0 .75rem;
+	overflow-wrap: anywhere;
+}
+
+[airkit_demo_screens_agents_backups_history_row] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: .5rem 1rem;
+	padding: .5rem .75rem;
+	border-radius: var(--airkit_radius);
+}
+
+[airkit_demo_screens_agents_backups_history_row]:hover {
+	background: var(--airkit_hover);
+}
+
+[airkit_demo_screens_agents_backups_summary] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .25rem .625rem;
+	flex: 1 1 20rem;
+	min-width: 0;
+}
+
+[airkit_demo_screens_agents_backups_number] {
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+
+[airkit_demo_screens_agents_backups_details] {
+	flex: 1 1 100%;
+	min-width: 0;
+	white-space: normal;
+	font-size: .875rem;
+	color: var(--airkit_shade);
+	overflow-wrap: anywhere;
+}
+
+[airkit_demo_screens_agents_backups_row_actions] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	gap: .25rem;
+	min-width: 0;
+	max-width: 100%;
+}
+
+
+[airkit_demo_screens_agents_backups_restore] {
+	padding: .5rem .75rem;
+}

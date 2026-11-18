@@ -1,0 +1,25 @@
+[mol_book2] > [airkit_demo_screens_scrapeq_show_menu] {
+	flex: 0 0 36rem;
+	--airkit_columns: 5rem 7rem 11rem;
+}
+
+[airkit_demo_screens_scrapeq_show_menu_body_content] {
+	max-width: 44rem;
+}
+
+[airkit_demo_screens_scrapeq_show_menu_body_content] > [mol_view] {
+	max-width: none;
+}
+
+[airkit_demo_screens_scrapeq_show_reasons] [airkit_problem_text] {
+	white-space: pre-line;
+}
+
+[airkit_demo_screens_scrapeq_show_examples_text] {
+	line-height: 1.5;
+	overflow-wrap: anywhere;
+}
+
+[airkit_demo_screens_scrapeq_show_strip] {
+	margin-bottom: .5rem;
+}

@@ -1,0 +1,64 @@
+$airkit_demo_dashboard $mol_page
+	title @ \Dashboard
+	tools /
+		<= Sample $airkit_pill
+			title @ \Sample data
+		<= Period $mol_switch
+			value? <=> period? \30d
+			options *
+				24h \24 hours
+				7d \7 days
+				30d \30 days
+	body /
+		<= Needs $airkit_section
+			title @ \Needs you
+			note @ \the number is how many items wait; most urgent first
+			content /
+				<= Attention $airkit_attention
+					entries <= attention_entries /$airkit_attention_entry
+		<= Totals $airkit_section
+			title <= totals_title \
+			note <= totals_note \
+			content /
+				<= Tiles $airkit_tiles
+					sub /
+						<= Running $airkit_stat
+							label @ \Services running
+							value \8
+							unit \of 8
+							note @ \all started
+						<= Requests $airkit_stat
+							label @ \Requests
+							value <= requests_value \
+							unit \k
+							delta <= requests_delta 0
+							series <= requests_series /number
+						<= Errors $airkit_stat
+							label @ \Error rate
+							value <= errors_value \
+							unit \%
+							delta <= errors_delta 0
+							delta_unit \ pt
+							higher_is_better false
+						<= Storage $airkit_stat
+							label @ \Storage used
+							value \63
+							unit \%
+							note @ \warns at 80%
+							portion 0.63
+							tick 0.8
+		<= Traffic $airkit_section
+			title @ \Requests by service, thousands
+			note @ \top 4 and the rest
+			content /
+				<= Chart $airkit_chart
+					series <= chart_series /$airkit_chart_series
+					labels <= chart_labels /string
+		<= Recent $airkit_section
+			title @ \Recent activity
+			link_title @ \Jobs
+			link_arg *
+				section \jobs
+			content /
+				<= Feed $airkit_feed
+					entries <= feed_entries /$airkit_feed_entry

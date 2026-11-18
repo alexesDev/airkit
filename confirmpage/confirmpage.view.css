@@ -1,0 +1,19 @@
+[mol_book2] > [airkit_confirmpage] {
+	flex: 0 0 28rem;
+}
+
+[airkit_confirmpage_actions] {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1.25rem;
+}
+
+[airkit_confirmpage_tone="bad"] [airkit_confirmpage_confirm][mol_button_major] {
+	background: var(--airkit_bad);
+	color: var(--airkit_on_accent);
+}
+
+[airkit_confirmpage_status] {
+	color: var(--airkit_bad);
+}

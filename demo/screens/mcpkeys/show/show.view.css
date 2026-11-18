@@ -1,0 +1,7 @@
+[mol_book2] > [airkit_demo_screens_mcpkeys_show] {
+	flex: 0 0 32rem;
+}
+
+[airkit_demo_screens_mcpkeys_show_body_content] {
+	max-width: 40rem;
+}

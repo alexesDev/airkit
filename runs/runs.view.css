@@ -1,0 +1,25 @@
+[airkit_runs] {
+	display: inline-flex;
+	gap: 3px;
+	align-items: center;
+	min-height: 1.5rem;
+}
+
+[airkit_runs_tick] {
+	width: .375rem;
+	height: 1rem;
+	border-radius: 2px;
+	background: var(--airkit_ok);
+	opacity: .75;
+}
+
+[airkit_runs_state="bad"] {
+	background: var(--airkit_bad);
+	opacity: 1;
+	height: 1.25rem;
+}
+
+[airkit_runs_state="none"] {
+	background: var(--airkit_idle_tint);
+	opacity: 1;
+}

@@ -1,0 +1,8 @@
+$airkit_pill $mol_view
+	tone \neutral
+	minimal_height 24
+	attr *
+		^
+		airkit_pill_tone <= tone
+	sub /
+		<= title \

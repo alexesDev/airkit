@@ -1,0 +1,19 @@
+$airkit_demo_screens_agents_codexlimit $airkit_section
+	store $airkit_demo_screens_agents_store
+	agent_id 0
+	title @ \Codex weekly limit
+	content /
+		<= Note $mol_paragraph
+			title @ \The share of this node's weekly Codex window the agent may spend. Past it, the broker refuses the agent's turns until the window resets.
+		<= Message $mol_status
+			message <= message \
+		<= Limit $mol_row
+			sub /
+				<= Percent $mol_number
+					hint \1–100
+					value? <=> percent? 50
+				<= Unit $mol_paragraph
+					title @ \% of the weekly window
+				<= Save $mol_button_minor
+					title @ \Save limit
+					click? <=> save? null

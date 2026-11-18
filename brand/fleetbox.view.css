@@ -1,0 +1,67 @@
+[airkit_air][airkit_brand="fleetbox"][mol_theme="$mol_theme_dark"] {
+	--airkit_ground: #07080b;
+	--airkit_mid: #101218;
+	--airkit_card: #1c2029;
+	--airkit_text: #f4f5f7;
+	--airkit_shade: #a5acba;
+	--airkit_faint: #7d8494;
+	--airkit_edge: #3a4251;
+	--airkit_hover: #8bb7ff12;
+	--airkit_accent: #8bb7ff;
+	--airkit_accent_strong: #c5dbff;
+	--airkit_on_accent: #07080b;
+	--airkit_selected: #111f34;
+	--airkit_pick: #111f3480;
+	--airkit_focus: #8bb7ff;
+	--airkit_warn: #e4ac78;
+	--airkit_warn_tint: oklch(78% .1 62 / .16);
+	--airkit_idle_tint: oklch(85% .02 262 / .1);
+	--airkit_ok: oklch(80% .11 160);
+	--airkit_ok_tint: oklch(80% .11 160 / .13);
+	--airkit_bad: oklch(74% .13 22);
+	--airkit_bad_tint: oklch(74% .13 22 / .13);
+	--airkit_bad_edge: oklch(74% .13 22 / .55);
+	--airkit_series_1: #8bb7ff;
+	--airkit_series_2: oklch(80% .1 200);
+	--airkit_series_3: oklch(68% .14 290);
+	--airkit_series_4: #c5dbff;
+	--airkit_series_5: oklch(58% .12 262);
+	--airkit_series_6: oklch(78% .1 325);
+	--airkit_series_7: oklch(62% .08 220);
+	--airkit_series_8: oklch(86% .06 280);
+	--airkit_series_rest: #6f7786;
+}
+
+[airkit_air][airkit_brand="fleetbox"][mol_theme="$mol_theme_light"] {
+	--airkit_ground: oklch(94.2% .009 262);
+	--airkit_mid: oklch(97.2% .005 262);
+	--airkit_card: oklch(99.5% .002 262);
+	--airkit_text: oklch(19% .012 262);
+	--airkit_shade: oklch(46% .022 262);
+	--airkit_faint: oklch(62% .018 262);
+	--airkit_edge: oklch(38% .03 262 / .38);
+	--airkit_hover: oklch(47% .15 262 / .06);
+	--airkit_accent: oklch(46% .15 262);
+	--airkit_accent_strong: oklch(38% .15 262);
+	--airkit_on_accent: oklch(99.5% .002 262);
+	--airkit_selected: oklch(46% .15 262 / .11);
+	--airkit_pick: oklch(46% .15 262 / .05);
+	--airkit_focus: oklch(52% .17 262);
+	--airkit_warn: oklch(52% .12 65);
+	--airkit_warn_tint: oklch(78% .09 62 / .26);
+	--airkit_idle_tint: oklch(50% .02 262 / .1);
+	--airkit_ok: oklch(44% .1 160);
+	--airkit_ok_tint: oklch(44% .1 160 / .11);
+	--airkit_bad: oklch(47% .15 22);
+	--airkit_bad_tint: oklch(47% .15 22 / .09);
+	--airkit_bad_edge: oklch(47% .15 22 / .5);
+	--airkit_series_1: oklch(46% .15 262);
+	--airkit_series_2: oklch(66% .1 205);
+	--airkit_series_3: oklch(52% .14 295);
+	--airkit_series_4: oklch(76% .08 255);
+	--airkit_series_5: oklch(36% .08 240);
+	--airkit_series_6: oklch(68% .11 330);
+	--airkit_series_7: oklch(58% .07 220);
+	--airkit_series_8: oklch(80% .06 290);
+	--airkit_series_rest: oklch(72% .01 262);
+}

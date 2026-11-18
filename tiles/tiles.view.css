@@ -1,0 +1,6 @@
+[airkit_tiles] {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr));
+	gap: .75rem;
+	margin-bottom: 2.25rem;
+}

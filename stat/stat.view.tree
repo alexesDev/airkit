@@ -1,0 +1,43 @@
+$airkit_stat $mol_view
+	label \
+	value \
+	unit \
+	delta +NaN
+	delta_unit \%
+	higher_is_better true
+	note \
+	measured true
+	not_measured_text @ \Not measured
+	portion -1
+	tick -1
+	meter_tone \neutral
+	series /number
+	attr *
+		^
+		airkit_stat_measured <= measured
+	sub <= parts /
+		<= Label $mol_view
+			sub /
+				<= label
+		<= Line $mol_view
+			sub <= line /
+				<= Value $mol_view
+					sub /
+						<= value_shown \
+				<= Unit $mol_view
+					sub /
+						<= unit
+				<= Delta $mol_view
+					attr *
+						airkit_stat_delta_tone <= delta_tone \neutral
+					sub /
+						<= delta_text \
+		<= Note $mol_view
+			sub /
+				<= note
+		<= Meter $airkit_meter
+			portion <= portion
+			tick <= tick
+			tone <= meter_tone
+		<= Spark $airkit_spark
+			series <= series

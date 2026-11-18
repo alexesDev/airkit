@@ -1,0 +1,61 @@
+[airkit_chart] {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 2.25rem;
+}
+
+[airkit_chart_plot] {
+	height: 13rem;
+	color: var(--airkit_shade);
+	font-size: .75rem;
+}
+
+[airkit_chart_plot] [mol_plot_ruler_curve] {
+	color: var(--airkit_edge);
+	opacity: .5;
+}
+
+[airkit_chart_plot] [mol_plot_ruler_label] {
+	color: var(--airkit_shade);
+	fill: var(--airkit_shade);
+	text-shadow: none;
+}
+
+[airkit_chart_plot] [mol_plot_ruler_background] {
+	fill: transparent;
+}
+
+[airkit_chart_bar] {
+	stroke: currentColor;
+}
+
+[airkit_chart_legend] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .25rem 1.25rem;
+	font-size: .8125rem;
+	color: var(--airkit_shade);
+	margin-top: .5rem;
+}
+
+[airkit_chart_legend_item] {
+	display: inline-flex;
+	align-items: center;
+	gap: .375rem;
+}
+
+[airkit_chart_swatch] {
+	width: .625rem;
+	height: .625rem;
+	border-radius: .1875rem;
+}
+
+[airkit_chart_legend_total] {
+	color: var(--airkit_text);
+	font-weight: 500;
+	font-variant-numeric: tabular-nums;
+}
+
+[airkit_chart_marks_curve] {
+	display: none;
+}

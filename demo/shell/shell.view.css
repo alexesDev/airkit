@@ -1,0 +1,28 @@
+[mol_book2] > [airkit_demo_shell_menu] {
+	flex: 0 0 19rem;
+}
+
+[airkit_demo_shell_settings] {
+	flex: 1 1 auto;
+	min-width: 0;
+	white-space: normal;
+	display: flex;
+	flex-direction: column;
+	gap: .75rem;
+	padding: 0 .75rem .75rem;
+	font-size: .8125rem;
+	color: var(--airkit_shade);
+}
+
+[airkit_demo_shell_density_field],
+[airkit_demo_shell_brand_field] {
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+	align-items: flex-start;
+}
+
+
+[airkit_air] [airkit_demo_shell_settings] [mol_switch] {
+	flex-wrap: nowrap;
+}

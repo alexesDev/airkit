@@ -1,0 +1,29 @@
+$airkit_demo_keys_create $mol_page
+	store $airkit_demo_keys_store
+	title @ \Create key
+	tools /
+		<= Cancel $mol_link
+			title @ \Cancel
+			arg *
+				key null
+	body /
+		<= Form $mol_form
+			body /
+				<= Name_field $mol_form_field
+					name @ \Name
+					bid <= name_bid \
+					control <= Name $mol_string
+						hint @ \lowercase-with-dashes
+						value? <=> name? \
+				<= Scope_field $mol_form_field
+					name @ \Scope
+					control <= Scope $mol_switch
+						value? <=> scope? \read
+						options *
+							read @ \Read
+							write @ \Read and write
+			buttons /
+				<= Submit $mol_button_major
+					title @ \Create
+					enabled <= submit_enabled true
+					click? <=> submit? null

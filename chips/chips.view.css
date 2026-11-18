@@ -1,0 +1,31 @@
+[airkit_air] [airkit_chips][mol_switch] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .375rem;
+	padding: 0;
+	background: transparent;
+}
+
+[airkit_air] [airkit_chips][mol_switch] > [mol_check] {
+	display: inline-flex;
+	gap: .375rem;
+	align-items: center;
+	padding: .25rem .75rem;
+	border-radius: 1rem;
+	font-size: .875rem;
+	font-weight: 500;
+	color: var(--airkit_shade);
+	background: var(--airkit_idle_tint);
+	box-shadow: none;
+}
+
+[airkit_air] [airkit_chips][mol_switch] > [mol_check][mol_check_checked="true"] {
+	background: var(--airkit_selected);
+	color: var(--airkit_accent_strong);
+	box-shadow: none;
+}
+
+[airkit_chips_option_count] {
+	font-variant-numeric: tabular-nums;
+	opacity: .8;
+}

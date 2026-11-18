@@ -1,0 +1,15 @@
+$airkit_problem $mol_view
+	title \
+	text \
+	tone \bad
+	attr *
+		^
+		role \alert
+		airkit_problem_tone <= tone
+	sub /
+		<= Title $mol_view
+			sub /
+				<= title
+		<= Text $mol_view
+			sub /
+				<= text

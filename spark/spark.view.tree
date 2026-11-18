@@ -1,0 +1,8 @@
+$airkit_spark $mol_plot_pane
+	gap_hor 0
+	gap_vert 2
+	series /number
+	graphs /
+		<= Line $mol_plot_line
+			series_x <= series_x /number
+			series_y <= series

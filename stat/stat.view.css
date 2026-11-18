@@ -1,0 +1,66 @@
+[airkit_stat] {
+	display: flex;
+	flex-direction: column;
+	gap: .125rem;
+	padding: .875rem 1rem 1rem;
+	border-radius: .75rem;
+	background: var(--airkit_mid);
+	min-width: 0;
+}
+
+[mol_book2] > [mol_page]:not(:nth-last-child(1 of [mol_page])) [airkit_stat] {
+	background: var(--airkit_card);
+}
+
+[airkit_stat_label] {
+	font-size: .8125rem;
+	font-weight: 500;
+	color: var(--airkit_shade);
+}
+
+[airkit_stat_line] {
+	display: flex;
+	align-items: baseline;
+	gap: .5rem;
+	flex-wrap: wrap;
+}
+
+[airkit_stat_value] {
+	font-size: 1.75rem;
+	font-weight: 650;
+	line-height: 1.2;
+	letter-spacing: -.01em;
+	font-variant-numeric: tabular-nums;
+}
+
+[airkit_stat]:not([airkit_stat_measured]) [airkit_stat_value] {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--airkit_shade);
+	line-height: 2.1rem;
+}
+
+[airkit_stat_unit] {
+	font-size: .875rem;
+	color: var(--airkit_shade);
+}
+
+[airkit_stat_delta] {
+	font-size: .8125rem;
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+	color: var(--airkit_shade);
+}
+
+[airkit_stat_delta_tone="ok"] {
+	color: var(--airkit_ok);
+}
+
+[airkit_stat_delta_tone="bad"] {
+	color: var(--airkit_bad);
+}
+
+[airkit_stat_note] {
+	font-size: .8125rem;
+	color: var(--airkit_shade);
+}

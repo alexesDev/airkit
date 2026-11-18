@@ -1,0 +1,4 @@
+[mol_book2] > [airkit_demo_keys_menu] {
+	flex: 0 0 47rem;
+	--airkit_columns: minmax(8rem, 1fr) 6.5rem minmax(11.5rem, 1fr) 9.5rem;
+}

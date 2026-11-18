@@ -1,0 +1,31 @@
+[airkit_section] {
+	margin-bottom: 1.5rem;
+}
+
+[airkit_section_head] {
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+	gap: .75rem;
+	margin: 0 0 .5rem;
+}
+
+[airkit_section_head] > [airkit_section_title] {
+	font-size: 1.0625rem;
+	font-weight: 650;
+	padding: 0;
+	margin: 0;
+}
+
+[airkit_section_note] {
+	font-size: .8125rem;
+	color: var(--airkit_shade);
+}
+
+[airkit_section_head] > [airkit_section_link] {
+	margin-left: auto;
+	font-size: .875rem;
+	font-weight: 500;
+	color: var(--airkit_accent);
+	padding: 0;
+}

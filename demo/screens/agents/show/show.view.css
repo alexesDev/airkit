@@ -1,0 +1,32 @@
+[mol_book2] > [airkit_demo_screens_agents_show] {
+	flex: 1 0 54rem;
+}
+
+[airkit_demo_screens_agents_show_body_content] {
+	max-width: 60rem;
+}
+
+[airkit_demo_screens_agents_show_body_content] > [mol_view] {
+	max-width: none;
+}
+
+[airkit_demo_screens_agents_show_verdict] {
+	font-size: 1.0625rem;
+	margin-bottom: 1rem;
+}
+
+[airkit_demo_screens_agents_show_link_row] {
+	display: flex;
+	flex-direction: column;
+	padding: .25rem 0 .75rem;
+}
+
+[airkit_demo_screens_agents_show_link] {
+	font-weight: 600;
+	padding: .25rem 0;
+}
+
+[airkit_demo_screens_agents_show_link_description] {
+	color: var(--airkit_shade);
+	font-size: .875rem;
+}

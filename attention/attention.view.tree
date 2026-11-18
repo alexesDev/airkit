@@ -1,0 +1,27 @@
+$airkit_attention $mol_list
+	entries /$airkit_attention_entry
+	calm_text @ \Nothing needs you
+	rows <= items /
+	Empty <= Calm $mol_view
+		sub /
+			<= calm_text
+	Item* $mol_link
+		arg <= item_arg* *
+		minimal_height 56
+		sub /
+			<= Count* $mol_view
+				attr *
+					airkit_attention_tone <= item_tone* \neutral
+				sub /
+					<= item_count* \
+			<= Text* $mol_view
+				sub /
+					<= What* $mol_view
+						sub /
+							<= item_what* \
+					<= Why* $mol_view
+						sub /
+							<= item_why* \
+			<= Go* $mol_view
+				sub /
+					<= item_action* \

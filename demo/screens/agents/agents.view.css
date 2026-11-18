@@ -1,0 +1,35 @@
+[mol_book2] > [airkit_demo_screens_agents_menu] {
+	flex: 0 0 50rem;
+	--airkit_columns: 1.5rem minmax(14rem, 1fr) 7rem 11rem 6.5rem;
+}
+
+[airkit_demo_screens_agents_controls] {
+	display: flex;
+	flex-direction: column;
+	gap: .75rem;
+	padding: .25rem .75rem 1.25rem;
+}
+
+[airkit_demo_screens_agents_name_title] {
+	font-weight: 600;
+}
+
+[airkit_demo_screens_agents_description] {
+	color: var(--airkit_shade);
+	font-size: .875rem;
+	line-height: 1.4;
+}
+
+[airkit_demo_screens_agents_bot] [mol_labeler_content] {
+	white-space: nowrap;
+}
+
+[airkit_demo_screens_agents_id] [mol_labeler_content] {
+	color: var(--airkit_shade);
+	font-variant-numeric: tabular-nums;
+}
+
+[mol_book2] > [airkit_demo_screens_agents_archive_confirm],
+[mol_book2] > [airkit_demo_screens_agents_restore_confirm] {
+	flex: 0 0 28rem;
+}

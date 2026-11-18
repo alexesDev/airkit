@@ -1,0 +1,8 @@
+[mol_book2] > [airkit_demo_screens_mailbox_approvals_menu] {
+	flex: 0 0 26rem;
+	--airkit_columns: minmax(8rem, 1fr) 9rem;
+}
+
+[airkit_demo_screens_mailbox_approvals_from] [mol_labeler_content] {
+	font-weight: 600;
+}

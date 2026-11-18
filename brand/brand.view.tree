@@ -1,0 +1,4 @@
+$airkit_brand $mol_plugin
+	name \
+	attr *
+		airkit_brand <= name

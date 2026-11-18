@@ -1,0 +1,25 @@
+[airkit_kv] {
+	display: grid;
+	grid-template-columns: max-content minmax(0, 1fr);
+	gap: .5rem 2rem;
+	padding: 1rem 1.125rem;
+	border-radius: .75rem;
+	background: var(--airkit_mid);
+	max-width: 36rem;
+	margin-bottom: 2rem;
+}
+
+[airkit_kv_pair] {
+	display: contents;
+}
+
+[airkit_kv_key] {
+	color: var(--airkit_shade);
+	font-size: .875rem;
+	line-height: 1.5rem;
+}
+
+[airkit_kv_value] {
+	min-width: 0;
+	overflow-wrap: anywhere;
+}

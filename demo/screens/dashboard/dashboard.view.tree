@@ -1,0 +1,100 @@
+$airkit_demo_screens_dashboard $mol_page
+	title @ \Dashboard
+	store $airkit_demo_screens_dashboard_store
+	tools /
+		<= Sample $airkit_pill
+			title @ \Sample data
+		<= Period $mol_switch
+			options *
+				hours @ \48 hours
+				days @ \30 days
+				weeks @ \26 weeks
+				months @ \12 months
+			value? <=> period? \days
+	body /
+		<= Needs $airkit_empty
+			title @ \Needs you — not in the current screen
+			text @ \The panel's dashboard shows no waiting work: it has no query for items that wait on an admin.
+		<= Activity $airkit_section
+			title @ \Activity of the fleet
+			note @ \top 8 agents and the rest; point at a bar to see its split
+			content /
+				<= Metric $mol_switch
+					options *
+						tokens @ \Tokens, millions
+						messages @ \Messages
+					value? <=> metric? \tokens
+				<= Chart $airkit_demo_screens_dashboard_chart
+					series <= layers /$airkit_chart_series
+					labels <= labels /string
+					total_digits <= total_digits 1
+				<= Breakdown $mol_view
+					sub <= breakdown /
+		<= Links $airkit_section
+			title @ \Links
+			content /
+				<= Links_list $mol_list
+					rows <= link_rows /
+		<= Images $airkit_section
+			title @ \Images
+			note @ \checked every 5 seconds
+			content /
+				<= Image_columns $airkit_columns
+					titles /
+						<= image_columns_text @ \Name
+						<= image_columns_text_1 @ \Checked
+						<= image_columns_text_2 @ \Problem
+						<= image_columns_text_3 @ \Check command
+						<= image_columns_text_4 @ \Reference
+				<= Image_list $mol_list
+					rows <= image_rows /
+	Breakdown_empty $mol_view
+		sub /
+			<= breakdown_empty_text @ \Nothing in this span
+	Breakdown_title $mol_view
+		sub /
+			<= breakdown_title \
+	Share* $mol_view
+		sub /
+			<= Share_color* $mol_view
+				style *
+					background <= share_color* \
+			<= Share_name* $mol_view
+				sub /
+					<= share_name* \
+			<= Share_value* $mol_view
+				sub /
+					<= share_value* \
+	Link_row* $mol_row
+		minimal_height 24
+		sub <= link_row_sub* /
+	Link* $mol_link
+		uri <= link_uri* \
+		sub /
+			<= link_label* \
+	Link_description* $mol_view
+		sub /
+			<= link_description* \
+	Image_row* $mol_row
+		minimal_height 24
+		sub /
+			<= Image_name* $airkit_labeler_name
+				value <= image_name* \
+			<= Image_check* $mol_labeler
+				title @ \Checked
+				content /
+					<= Image_pill* $airkit_pill
+						tone <= image_tone* \neutral
+						title <= image_checked* \
+			<= Image_problem* $mol_labeler
+				title @ \Problem
+				content /
+					<= image_problem* \
+			<= Image_command* $mol_labeler
+				title @ \Check command
+				content /
+					<= image_command* \
+			<= Image_ref* $mol_labeler
+				title @ \Reference
+				content /
+					<= image_ref* \

@@ -1,0 +1,24 @@
+$airkit_demo_keys_show $mol_page
+	store $airkit_demo_keys_store
+	key_id \
+	title <= name \
+	tools <= tools_shown /
+	Revoke $mol_link
+		title @ \Revoke
+		arg *
+			key_confirm \revoke
+	body /
+		<= Secret $airkit_secret
+			value <= secret \
+			stage? <=> secret_stage? \shown
+		<= Card $airkit_kv
+			fields <= fields *string
+		<= Uses $airkit_section
+			title @ \Recent use
+			note <= uses_note \
+			content <= uses_content /
+	Feed $airkit_feed
+		entries <= uses /$airkit_feed_entry
+	Unused $airkit_empty
+		title @ \Never used
+		text @ \No request has carried this key yet.

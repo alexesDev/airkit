@@ -1,0 +1,34 @@
+$airkit_chart $mol_view
+	series /$airkit_chart_series
+	labels /string
+	total_digits 1
+	sub /
+		<= Plot $mol_plot_pane
+			gap_left 44
+			gap_right 24
+			gap_top 8
+			gap_bottom 28
+			graphs <= graphs /
+		<= Legend $mol_view
+			sub <= legend /
+	Bar* $mol_plot_bar
+		series_x <= series_x /number
+		series_y <= stacked* /number
+		color <= series_color* \
+		stroke_width <= bar_width \
+	Ruler $mol_plot_ruler_vert
+		title \
+		step <= ruler_step 0
+	Marks $mol_plot_mark_hor
+		labels <= labels
+	Legend_item* $mol_view
+		sub /
+			<= Swatch* $mol_view
+				style *
+					background <= series_color*
+			<= Legend_title* $mol_view
+				sub /
+					<= series_title* \
+			<= Legend_total* $mol_view
+				sub /
+					<= series_total* \

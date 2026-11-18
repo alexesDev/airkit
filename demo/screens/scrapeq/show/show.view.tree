@@ -1,0 +1,60 @@
+$airkit_demo_screens_scrapeq_show $airkit_catalog
+	store $airkit_demo_screens_scrapeq_store
+	job_id \
+	param \scrapeq_run
+	menu_title <= job_id
+	menu_filter_enabled false
+	actions <= job_actions /
+		<= Trigger $mol_button_major
+			title @ \Run now
+			click? <=> trigger? null
+		<= Pause $mol_button_minor
+			title <= pause_title \Pause
+			click? <=> pause? null
+	Run_page* $airkit_demo_screens_scrapeq_run
+		store <= store
+		job_id <= job_id
+		run_id <= run_id* \
+		close_icon <= Spread_close
+	Message $mol_status
+		message <= message? \
+	Reasons $airkit_problem
+		tone \warn
+		title @ \Why it is blocked
+		text <= reasons \
+	Meta $airkit_kv
+		fields <= meta *string
+	Examples $airkit_section
+		title @ \Examples the gate tested
+		content /
+			<= Examples_text $mol_view
+				sub /
+					<= examples \
+	Runs $airkit_section
+		title @ \Runs, newest first
+		content <= runs_content /
+	Strip $airkit_runs
+		runs <= strip /string
+	Columns $airkit_columns
+		titles /
+			<= columns_text @ \Run
+			<= columns_text_1 @ \Outcome
+			<= columns_text_2 @ \Queued
+	Menu_links_empty <= Runs_empty $airkit_empty
+		title @ \No runs yet.
+	menu_link_content* /
+		<= Run_row* $mol_row
+			minimal_height 24
+			sub /
+				<= Run_id* $airkit_labeler_name
+					title @ \Run
+					value <= run_id*
+				<= Run_outcome* $mol_labeler
+					title @ \Outcome
+					content /
+						<= Run_outcome_pill* $airkit_pill
+							tone <= run_tone* \neutral
+							title <= run_outcome* \
+				<= Run_queued* $airkit_labeler_moment
+					title @ \Queued
+					value <= run_queued* \

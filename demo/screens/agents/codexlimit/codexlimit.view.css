@@ -1,0 +1,18 @@
+[airkit_demo_screens_agents_codexlimit_note] {
+	color: var(--airkit_shade);
+	font-size: .875rem;
+	line-height: 1.5;
+	max-width: 44rem;
+	padding: 0 0 .75rem;
+}
+
+[airkit_demo_screens_agents_codexlimit_limit] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .5rem;
+}
+
+[airkit_demo_screens_agents_codexlimit_percent] {
+	flex: 0 0 9rem;
+}

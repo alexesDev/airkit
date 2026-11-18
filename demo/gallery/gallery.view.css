@@ -1,0 +1,38 @@
+[mol_book2] > [airkit_demo_gallery] {
+	flex: 1 1 60rem;
+}
+
+[airkit_demo_gallery_pill_row] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .75rem;
+	align-items: center;
+}
+
+[airkit_demo_gallery_meter_rows] {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 24rem;
+	padding-bottom: .5rem;
+}
+
+[airkit_demo_gallery_runs_rows] {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
+[airkit_demo_gallery_list] {
+	--airkit_columns: minmax(8rem, 1.2fr) 7rem minmax(8rem, 1.4fr) 10rem;
+}
+
+[airkit_demo_gallery_list_row] {
+	padding: var(--airkit_row_y) .75rem;
+	border-radius: var(--airkit_radius);
+}
+
+[airkit_demo_gallery_list_row]:hover {
+	background: var(--airkit_hover);
+}
+

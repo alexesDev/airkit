@@ -1,0 +1,38 @@
+$airkit_demo_jobs_show $mol_page
+	job_id \
+	title <= job_id
+	tools /
+		<= Run $mol_button_major
+			title <= run_title \Run now
+			enabled <= run_enabled true
+			click? <=> run? null
+		<= Pause $mol_button_minor
+			title <= pause_title \Pause
+			click? <=> pause? null
+	body /
+		<= Problem $airkit_problem
+			title <= problem_title \
+			text <= problem_text \
+		<= Tiles $airkit_tiles
+			sub /
+				<= Success $airkit_stat
+					label @ \Success, 24 h
+					value <= success \
+					unit \%
+					delta <= success_delta 0
+					delta_unit \ pt
+				<= Median $airkit_stat
+					label @ \Median run
+					value <= median \
+					unit \s
+				<= Rows $airkit_stat
+					label @ \Rows, last success
+					value <= rows \
+		<= Schedule $airkit_kv
+			fields <= schedule *string
+		<= Runs $airkit_section
+			title @ \Runs
+			note @ \newest first
+			content /
+				<= Feed $airkit_feed
+					entries <= feed /$airkit_feed_entry

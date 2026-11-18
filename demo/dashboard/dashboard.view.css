@@ -1,0 +1,7 @@
+[mol_book2] > [airkit_demo_dashboard] {
+	flex: 1 1 60rem;
+}
+
+[airkit_demo_dashboard_body] > * {
+	max-width: 60rem;
+}

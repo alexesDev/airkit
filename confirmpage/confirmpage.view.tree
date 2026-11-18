@@ -1,0 +1,26 @@
+$airkit_confirmpage $mol_page
+	title @ \Confirm
+	text \
+	confirm_title @ \Confirm
+	cancel_title @ \Cancel
+	cancel_arg *
+	done_arg *
+	tone \bad
+	attr *
+		^
+		airkit_confirmpage_tone <= tone
+	tools /
+		<= Cancel $mol_link
+			title <= cancel_title
+			arg <= cancel_arg
+	body /
+		<= Text $mol_text
+			text <= text
+		<= Actions $mol_view
+			sub /
+				<= Confirm $mol_button_major
+					title <= confirm_title
+					click? <=> confirm? null
+				<= Status $mol_status
+					message <= message? \
+	run? null

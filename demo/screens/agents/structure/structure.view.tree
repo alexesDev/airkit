@@ -1,0 +1,61 @@
+$airkit_demo_screens_agents_structure $mol_view
+	store $airkit_demo_screens_agents_store
+	agent_id 0
+	sub /
+		<= Agent $mol_view
+			sub /
+				<= Agent_head $mol_view
+					sub /
+						<= Agent_name $mol_view
+							sub /
+								<= agent_name \
+						<= Agent_status $airkit_pill
+							tone <= agent_tone \neutral
+							title <= agent_status \
+				<= Agent_access $mol_view
+					sub /
+						<= access_line \
+				<= Params $airkit_kv
+					fields <= params *string
+		<= Cubes $mol_view
+			sub <= cubes /
+		<= Source $mol_view
+			sub /
+				<= source_text @ \Parts and their open links come from the agent spec, not from custom admin code.
+	Cube* $mol_view
+		sub <= cube_sub* /
+	Cube_top* $mol_view
+		sub /
+			<= Cube_head* $mol_view
+				sub /
+					<= Cube_title* $mol_view
+						sub /
+							<= cube_title* \
+					<= Cube_name* $mol_view
+						sub /
+							<= cube_name* \
+			<= Cube_icons* $mol_view
+				sub <= cube_icons* /
+	Cube_settings* $mol_link
+		hint @ \Settings
+		arg *
+			agent \settings
+			settings <= id_string \
+			group <= cube_group* \
+		sub /
+			<= Cube_settings_icon* $mol_icon_settings
+	Cube_open* $mol_link
+		hint @ \Open panel
+		uri <= cube_uri* \
+		target \_blank
+		sub /
+			<= Cube_open_icon* $mol_icon_open_in_new
+	Cube_state* $airkit_pill
+		tone <= cube_tone* \neutral
+		title <= cube_state* \
+	Cube_hint* $mol_view
+		sub /
+			<= cube_hint* \
+	Cube_broken* $mol_view
+		sub /
+			<= cube_broken* \
