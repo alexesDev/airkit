@@ -426,3 +426,29 @@
 	background: none;
 	animation: none;
 }
+
+[airkit_air] [mol_button_minor]:is(:active, [airkit_pressed]),
+[airkit_air] [mol_page_tools] [mol_link]:is(:active, [airkit_pressed]),
+[airkit_air] [mol_page_tools] [mol_link][mol_link_current="true"] {
+	color: var(--airkit_accent_strong);
+	background: var(--airkit_selected);
+	box-shadow: none;
+}
+
+[airkit_air] [mol_button_major]:is(:active, [airkit_pressed]) {
+	color: var(--airkit_on_accent);
+	background: var(--airkit_accent_strong);
+	box-shadow: none;
+}
+
+[airkit_air] [mol_button_major][airkit_tone="bad"],
+[airkit_air] [mol_button_major][airkit_tone="bad"]:hover {
+	background: var(--airkit_bad);
+	color: var(--airkit_on_accent);
+}
+
+[airkit_air] [mol_button_major][airkit_tone="bad"]:is(:active, [airkit_pressed]) {
+	background: var(--airkit_bad);
+	color: var(--airkit_on_accent);
+	box-shadow: inset 0 0 0 100vmax oklch(0% 0 0 / .18);
+}

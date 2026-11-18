@@ -231,6 +231,40 @@ $airkit_demo_gallery $mol_page
 							click? <=> submit? null
 						<= Form_status $mol_status
 							message <= form_message? \
+		<= Actions $airkit_section
+			title @ \Actions
+			note @ \Rest, and pressed (also the open link of the current page)
+			source \https://github.com/alexesDev/airkit/tree/main/air
+			content /
+				<= Actions_rest $mol_view
+					sub /
+						<= Major_rest $mol_button_major
+							title @ \Run now
+						<= Minor_rest $mol_button_minor
+							title @ \Pause
+						<= Danger_rest $mol_button_major
+							title @ \Revoke
+							attr *
+								^
+								airkit_tone \bad
+				<= Actions_pressed $mol_view
+					sub /
+						<= Major_pressed $mol_button_major
+							title @ \Run now
+							attr *
+								^
+								airkit_pressed \
+						<= Minor_pressed $mol_button_minor
+							title @ \Pause
+							attr *
+								^
+								airkit_pressed \
+						<= Danger_pressed $mol_button_major
+							title @ \Revoke
+							attr *
+								^
+								airkit_tone \bad
+								airkit_pressed \
 		<= Switch $airkit_section
 			source \https://github.com/alexesDev/airkit/tree/main/air
 			title @ \Segmented switch
