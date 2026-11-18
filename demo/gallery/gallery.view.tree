@@ -286,6 +286,47 @@ $airkit_demo_gallery $mol_page
 						<= Major_live $mol_button_major
 							title @ \Try: run for 3 s
 							click? <=> try_run? null
+		<= Stock $airkit_section
+			title @ \Stock widgets under the theme
+			note @ \A checkbox, a portion bar, and a list of plain rows that are not links
+			source \https://github.com/alexesDev/airkit/tree/main/air
+			content /
+				<= Checks $mol_view
+					sub /
+						<= Check_off $mol_check_box
+							title @ \Send a daily digest
+							checked? <=> digest? false
+						<= Check_on $mol_check_box
+							title @ \Keep a copy of every reply
+							checked? <=> copies? true
+				<= Portions $mol_view
+					sub /
+						<= Portion_low $mol_portion
+							portion 0.25
+						<= Portion_high $mol_portion
+							portion 0.8
+				<= Plain_rows $mol_list
+					rows /
+						<= Plain_first $mol_row
+							sub /
+								<= Plain_first_name $mol_labeler
+									title @ \Node
+									content /
+										<= plain_first_name @ \box-1
+								<= Plain_first_used $mol_labeler
+									title @ \Used
+									content /
+										<= plain_first_used @ \38%
+						<= Plain_second $mol_row
+							sub /
+								<= Plain_second_name $mol_labeler
+									title @ \Node
+									content /
+										<= plain_second_name @ \box-2
+								<= Plain_second_used $mol_labeler
+									title @ \Used
+									content /
+										<= plain_second_used @ \12%
 		<= Switch $airkit_section
 			source \https://github.com/alexesDev/airkit/tree/main/air
 			title @ \Segmented switch

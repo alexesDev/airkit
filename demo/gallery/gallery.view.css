@@ -46,3 +46,12 @@
 	align-items: center;
 	margin-bottom: .75rem;
 }
+
+[airkit_demo_gallery_checks],
+[airkit_demo_gallery_portions] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	align-items: center;
+	margin-bottom: 1rem;
+}
