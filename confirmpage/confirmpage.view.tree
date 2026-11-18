@@ -20,6 +20,9 @@ $airkit_confirmpage $mol_page
 			sub /
 				<= Confirm $mol_button_major
 					title <= confirm_title
+					attr *
+						^
+						airkit_tone <= tone
 					click? <=> confirm? null
 				<= Status $mol_status
 					message <= message? \
