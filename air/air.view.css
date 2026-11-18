@@ -427,45 +427,63 @@
 	animation: none;
 }
 
-@keyframes airkit_pending {
+@keyframes airkit_zebra {
 	from {
-		opacity: 1;
-	}
-	50% {
-		opacity: .72;
+		background-position: 0 0;
 	}
 	to {
-		opacity: 1;
+		background-position: 1.4142rem 0;
 	}
 }
 
 [airkit_air] :is([mol_button], [mol_link]):is([mol_view_error="Promise"], [airkit_pending]) {
-	animation: airkit_pending 1.2s ease-in-out infinite;
+	background-image: repeating-linear-gradient(-45deg, color-mix(in oklch, currentColor 18%, transparent) 0 .5rem, transparent .5rem 1rem);
+	background-size: 1.4142rem 1.4142rem;
+	animation: airkit_zebra .9s linear infinite;
+	opacity: 1;
 	cursor: progress;
+}
+
+[airkit_air] [mol_view][mol_view_error="Promise"]:empty,
+[airkit_air] [mol_view][airkit_pending]:empty {
+	background-color: var(--airkit_idle_tint);
+	background-image: repeating-linear-gradient(-45deg, var(--airkit_hover) 0 .5rem, transparent .5rem 1rem);
+	background-size: 1.4142rem 1.4142rem;
+	border-radius: var(--airkit_radius);
+	animation: airkit_zebra .9s linear infinite;
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	[airkit_air] :is([mol_button], [mol_link]):is([mol_view_error="Promise"], [airkit_pending]),
+	[airkit_air] [mol_view][mol_view_error="Promise"]:empty,
+	[airkit_air] [mol_view][airkit_pending]:empty {
+		animation: none;
+	}
 }
 
 [airkit_air] [mol_button_minor]:is(:active, [airkit_pressed]),
 [airkit_air] [mol_page_tools] [mol_link]:is(:active, [airkit_pressed]),
 [airkit_air] [mol_page_tools] [mol_link][mol_link_current="true"] {
 	color: var(--airkit_accent_strong);
-	background: var(--airkit_selected);
+	background-color: var(--airkit_selected);
 	box-shadow: none;
 }
 
 [airkit_air] [mol_button_major]:is(:active, [airkit_pressed]) {
 	color: var(--airkit_on_accent);
-	background: var(--airkit_accent_strong);
+	background-color: var(--airkit_accent_strong);
 	box-shadow: none;
 }
 
 [airkit_air] [mol_button_major][airkit_tone="bad"],
 [airkit_air] [mol_button_major][airkit_tone="bad"]:hover {
-	background: var(--airkit_bad);
+	background-color: var(--airkit_bad);
 	color: var(--airkit_on_accent);
 }
 
 [airkit_air] [mol_button_major][airkit_tone="bad"]:is(:active, [airkit_pressed]) {
-	background: var(--airkit_bad);
+	background-color: var(--airkit_bad);
 	color: var(--airkit_on_accent);
 	box-shadow: inset 0 0 0 100vmax oklch(0% 0 0 / .18);
 }
