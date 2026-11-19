@@ -352,6 +352,22 @@ $airkit_demo_gallery $mol_page
 							attr *
 								^
 								airkit_tone \bad
+		<= Confirmpages $airkit_section
+			title @ \Confirm page, enabled and disabled
+			note @ \The red Confirm keeps a readable label at rest and when it cannot be pressed
+			source \https://github.com/alexesDev/airkit/tree/main/confirmpage
+			content /
+				<= Confirmpages_row $mol_view
+					sub /
+						<= Confirm_on $airkit_confirmpage
+							title @ \Revoke nightly-ci?
+							text @ \Scripts that use nightly-ci stop working at once.
+							confirm_title @ \Revoke
+						<= Confirm_off $airkit_confirmpage
+							title @ \Revoke nightly-ci?
+							text @ \Scripts that use nightly-ci stop working at once.
+							confirm_title @ \Revoke
+							confirm_enabled false
 		<= Stock $airkit_section
 			title @ \Stock widgets under the theme
 			note @ \A checkbox, a portion bar, and a list of plain rows that are not links

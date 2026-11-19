@@ -20,6 +20,7 @@ $airkit_confirmpage $mol_page
 			sub /
 				<= Confirm $mol_button_major
 					title <= confirm_title
+					enabled <= confirm_enabled true
 					attr *
 						^
 						airkit_tone <= tone
