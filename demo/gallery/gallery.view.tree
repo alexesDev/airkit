@@ -233,7 +233,7 @@ $airkit_demo_gallery $mol_page
 							message <= form_message? \
 		<= Actions $airkit_section
 			title @ \Actions
-			note @ \At rest, pressed, and waiting for the action to finish
+			note @ \At rest, pressed, and waiting (moving stripes); a loading block; a live button that waits 3 s
 			source \https://github.com/alexesDev/airkit/tree/main/air
 			content /
 				<= Actions_rest $mol_view
@@ -282,6 +282,10 @@ $airkit_demo_gallery $mol_page
 							attr *
 								^
 								airkit_tone \bad
+								airkit_pending \
+						<= Block_pending $mol_view
+							attr *
+								^
 								airkit_pending \
 						<= Major_live $mol_button_major
 							title @ \Try: run for 3 s
