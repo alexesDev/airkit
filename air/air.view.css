@@ -260,7 +260,7 @@
 
 [airkit_air] [mol_book2_catalog_menu_link][mol_link_current] {
 	background: var(--airkit_selected);
-	color: var(--airkit_accent_strong);
+	color: var(--airkit_text);
 }
 
 :is([airkit_air][mol_book2], [airkit_air] [mol_book2]) > [mol_page]:first-child [mol_book2_catalog_menu_link][mol_link_current] {
