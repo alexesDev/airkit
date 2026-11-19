@@ -213,15 +213,10 @@
 [airkit_air] [mol_button][disabled] {
 	opacity: 1;
 	cursor: default;
-	color: var(--airkit_shade);
+	color: color-mix(in oklch, var(--airkit_link) 45%, transparent);
 	background: transparent;
-	box-shadow: inset 0 0 0 1px var(--airkit_idle_tint);
-}
-
-[airkit_air] [mol_button_major][disabled] {
-	color: var(--airkit_shade);
-	background: var(--airkit_idle_tint);
 	box-shadow: none;
+	text-decoration: none;
 }
 
 [airkit_air] :focus-visible,
@@ -533,4 +528,15 @@
 [airkit_air] [mol_view]:is([mol_link], [mol_button_minor])[airkit_tone="bad"],
 [airkit_air] [mol_view]:is([mol_link], [mol_button_minor])[airkit_tone="bad"]:is(:hover, :active, [airkit_pressed], [mol_link_current="true"]) {
 	color: var(--airkit_bad);
+}
+
+[airkit_air] [mol_view][mol_button_minor][airkit_tone="bad"][disabled] {
+	color: color-mix(in oklch, var(--airkit_bad) 45%, transparent);
+}
+
+[airkit_air] [mol_view][mol_button_major][disabled],
+[airkit_air] [mol_view][mol_button_major][airkit_tone="bad"][disabled] {
+	color: color-mix(in oklch, var(--airkit_text) 45%, transparent);
+	background-color: var(--airkit_idle_tint);
+	box-shadow: none;
 }

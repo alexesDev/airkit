@@ -322,6 +322,36 @@ $airkit_demo_gallery $mol_page
 								section \keys
 								key \key2
 								key_confirm \revoke
+		<= Disabled $airkit_section
+			title @ \Enabled and disabled
+			note @ \A disabled action is quieter than an enabled one: no frame, the same hue at lower contrast
+			source \https://github.com/alexesDev/airkit/tree/main/air
+			content /
+				<= Disabled_on $mol_view
+					sub /
+						<= Enabled_major $mol_button_major
+							title @ \Save
+						<= Enabled_minor $mol_button_minor
+							title @ \Unban
+						<= Enabled_danger $mol_button_minor
+							title @ \Remove admin
+							attr *
+								^
+								airkit_tone \bad
+				<= Disabled_off $mol_view
+					sub /
+						<= Disabled_major $mol_button_major
+							title @ \Save
+							enabled false
+						<= Disabled_minor $mol_button_minor
+							title @ \Unban
+							enabled false
+						<= Disabled_danger $mol_button_minor
+							title @ \Remove admin
+							enabled false
+							attr *
+								^
+								airkit_tone \bad
 		<= Stock $airkit_section
 			title @ \Stock widgets under the theme
 			note @ \A checkbox, a portion bar, and a list of plain rows that are not links
