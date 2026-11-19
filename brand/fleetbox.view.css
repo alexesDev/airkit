@@ -8,6 +8,7 @@
 	--airkit_edge: #3a4251;
 	--airkit_hover: #8bb7ff12;
 	--airkit_accent: #8bb7ff;
+	--airkit_link: #8bb7ff;
 	--airkit_accent_strong: #c5dbff;
 	--airkit_on_accent: #07080b;
 	--airkit_selected: #111f34;
@@ -42,6 +43,7 @@
 	--airkit_edge: oklch(38% .03 262 / .38);
 	--airkit_hover: oklch(47% .15 262 / .06);
 	--airkit_accent: oklch(46% .15 262);
+	--airkit_link: oklch(46% .15 262);
 	--airkit_accent_strong: oklch(38% .15 262);
 	--airkit_on_accent: oklch(99.5% .002 262);
 	--airkit_selected: oklch(46% .15 262 / .11);

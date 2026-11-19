@@ -4,6 +4,9 @@ $airkit_demo_keys_show $mol_page
 	title <= name \
 	tools <= tools_shown /
 	Revoke $mol_link
+		attr *
+			^
+			airkit_tone \bad
 		title @ \Revoke
 		arg *
 			key_confirm \revoke

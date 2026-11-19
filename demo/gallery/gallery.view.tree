@@ -290,6 +290,38 @@ $airkit_demo_gallery $mol_page
 						<= Major_live $mol_button_major
 							title @ \Try: run for 3 s
 							click? <=> try_run? null
+		<= Links $airkit_section
+			title @ \Links and actions
+			note @ \Text links and text-style actions in the link colour, underlined on hover; danger in the bad colour; one filled primary
+			source \https://github.com/alexesDev/airkit/tree/main/air
+			content /
+				<= Links_text $mol_view
+					sub /
+						<= links_before @ \The key was created by
+						<= Links_owner $mol_link
+							title @ \admin@example.com
+							arg *
+								section \keys
+						<= links_after @ \and is used by two scripts.
+				<= Links_actions $mol_view
+					sub /
+						<= Links_primary $mol_button_major
+							title @ \Save
+						<= Links_minor $mol_button_minor
+							title @ \Pause
+						<= Links_tool $mol_link
+							title @ \Settings
+							arg *
+								section \jobs
+						<= Links_danger $mol_link
+							title @ \Revoke
+							attr *
+								^
+								airkit_tone \bad
+							arg *
+								section \keys
+								key \key2
+								key_confirm \revoke
 		<= Stock $airkit_section
 			title @ \Stock widgets under the theme
 			note @ \A checkbox, a portion bar, and a list of plain rows that are not links

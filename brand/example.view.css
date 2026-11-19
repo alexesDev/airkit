@@ -7,6 +7,7 @@
 	--airkit_faint: oklch(62% .015 200);
 	--airkit_hover: oklch(50% .08 175 / .07);
 	--airkit_accent: oklch(47% .1 175);
+	--airkit_link: oklch(45% .1 175);
 	--airkit_accent_strong: oklch(38% .1 175);
 	--airkit_on_accent: oklch(99% 0 0);
 	--airkit_selected: oklch(47% .1 175 / .12);
@@ -28,6 +29,7 @@
 	--airkit_faint: oklch(57% .012 175);
 	--airkit_hover: oklch(80% .08 175 / .07);
 	--airkit_accent: oklch(80% .1 175);
+	--airkit_link: oklch(80% .1 175);
 	--airkit_accent_strong: oklch(88% .08 175);
 	--airkit_on_accent: oklch(18% .02 200);
 	--airkit_selected: oklch(80% .1 175 / .14);

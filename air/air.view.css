@@ -13,6 +13,7 @@
 	--airkit_selected: oklch(30% .01 255 / .1);
 	--airkit_pick: oklch(30% .01 255 / .05);
 	--airkit_focus: oklch(35% .01 255);
+	--airkit_link: oklch(47% .11 252);
 	--airkit_ok: oklch(45% .11 155);
 	--airkit_ok_tint: oklch(45% .11 155 / .11);
 	--airkit_warn: oklch(48% .11 65);
@@ -70,6 +71,7 @@
 	--airkit_selected: oklch(93% 0 0 / .13);
 	--airkit_pick: oklch(93% 0 0 / .06);
 	--airkit_focus: oklch(88% .005 255);
+	--airkit_link: oklch(79% .09 252);
 	--airkit_ok: oklch(80% .12 155);
 	--airkit_ok_tint: oklch(80% .12 155 / .14);
 	--airkit_warn: oklch(83% .11 80);
@@ -176,9 +178,19 @@
 	box-shadow: none;
 }
 
+[airkit_air] :where([mol_link]:not(:has([mol_view]))) {
+	color: var(--airkit_link);
+}
+
+[airkit_air] :where([mol_link]:not(:has([mol_view]))):is(:hover, :focus-visible),
+[airkit_air] [mol_button_minor]:is(:hover, :focus-visible) {
+	text-decoration: underline;
+	text-underline-offset: .2em;
+}
+
 [airkit_air] [mol_button_minor],
 [airkit_air] [mol_page_tools] [mol_link] {
-	color: var(--airkit_accent);
+	color: var(--airkit_link);
 	background: transparent;
 }
 
@@ -248,7 +260,7 @@
 
 [airkit_air] [mol_book2_catalog_menu_link][mol_link_current] {
 	background: var(--airkit_selected);
-	color: var(--airkit_accent_strong);
+	color: var(--airkit_text);
 }
 
 :is([airkit_air][mol_book2], [airkit_air] [mol_book2]) > [mol_page]:first-child [mol_book2_catalog_menu_link][mol_link_current] {
@@ -465,7 +477,7 @@
 [airkit_air] [mol_button_minor]:is(:active, [airkit_pressed]),
 [airkit_air] [mol_page_tools] [mol_link]:is(:active, [airkit_pressed]),
 [airkit_air] [mol_page_tools] [mol_link][mol_link_current="true"] {
-	color: var(--airkit_accent_strong);
+	color: var(--airkit_link);
 	background-color: var(--airkit_selected);
 	box-shadow: none;
 }
@@ -516,4 +528,9 @@
 
 [airkit_air] [mol_check_box] {
 	color: var(--airkit_text);
+}
+
+[airkit_air] [mol_view]:is([mol_link], [mol_button_minor])[airkit_tone="bad"],
+[airkit_air] [mol_view]:is([mol_link], [mol_button_minor])[airkit_tone="bad"]:is(:hover, :active, [airkit_pressed], [mol_link_current="true"]) {
+	color: var(--airkit_bad);
 }

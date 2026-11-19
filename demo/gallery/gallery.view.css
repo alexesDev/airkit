@@ -60,3 +60,24 @@
 	width: 8rem;
 	height: 2.5rem;
 }
+
+[airkit_demo_gallery_links_text] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .3em;
+	align-items: baseline;
+	margin-bottom: 1rem;
+}
+
+[airkit_demo_gallery_links_text] > [mol_link] {
+	padding: 0;
+	min-height: 0;
+	min-width: 0;
+}
+
+[airkit_demo_gallery_links_actions] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .75rem;
+	align-items: center;
+}
