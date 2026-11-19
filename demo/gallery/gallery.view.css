@@ -90,3 +90,16 @@
 	align-items: center;
 	margin-bottom: .75rem;
 }
+
+[airkit_demo_gallery_confirmpages_row] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+[airkit_demo_gallery_confirmpages_row] > [airkit_confirmpage] {
+	flex: 1 1 22rem;
+	height: 15rem;
+	border-radius: .75rem;
+	background: var(--airkit_card);
+}

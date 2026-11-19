@@ -183,7 +183,7 @@
 }
 
 [airkit_air] :where([mol_link]:not(:has([mol_view]))):is(:hover, :focus-visible),
-[airkit_air] [mol_button_minor]:is(:hover, :focus-visible) {
+[airkit_air] [mol_button_minor]:not([mol_button_major]):is(:hover, :focus-visible) {
 	text-decoration: underline;
 	text-underline-offset: .2em;
 }
@@ -525,12 +525,12 @@
 	color: var(--airkit_text);
 }
 
-[airkit_air] [mol_view]:is([mol_link], [mol_button_minor])[airkit_tone="bad"],
-[airkit_air] [mol_view]:is([mol_link], [mol_button_minor])[airkit_tone="bad"]:is(:hover, :active, [airkit_pressed], [mol_link_current="true"]) {
+[airkit_air] [mol_view]:is([mol_link], [mol_button_minor]):not([mol_button_major])[airkit_tone="bad"],
+[airkit_air] [mol_view]:is([mol_link], [mol_button_minor]):not([mol_button_major])[airkit_tone="bad"]:is(:hover, :active, [airkit_pressed], [mol_link_current="true"]) {
 	color: var(--airkit_bad);
 }
 
-[airkit_air] [mol_view][mol_button_minor][airkit_tone="bad"][disabled] {
+[airkit_air] [mol_view][mol_button_minor]:not([mol_button_major])[airkit_tone="bad"][disabled] {
 	color: color-mix(in oklch, var(--airkit_bad) 45%, transparent);
 }
 
