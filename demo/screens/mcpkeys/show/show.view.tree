@@ -4,10 +4,16 @@ $airkit_demo_screens_mcpkeys_show $mol_page
 	title <= name \
 	tools <= actions /
 		<= Revoke $mol_link
+			attr *
+				^
+				airkit_tone \bad
 			title @ \Revoke
 			arg *
 				confirm \revoke
 		<= Delete $mol_link
+			attr *
+				^
+				airkit_tone \bad
 			title @ \Delete
 			arg *
 				confirm \delete

@@ -19,6 +19,9 @@ $airkit_demo_screens_agents_show $mol_page
 			title <= toggle_title \
 			click? <=> toggle? null
 		<= Archive $mol_link
+			attr *
+				^
+				airkit_tone \bad
 			title @ \Archive
 			arg *
 				confirm \archive

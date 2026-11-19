@@ -134,7 +134,8 @@ Every token is `--airkit_<name>`, defined light and dark by `$airkit_air`.
 | `text`, `shade`, `faint` | body text, secondary text, placeholders |
 | `edge` | the outline of a field |
 | `hover`, `selected`, `pick` | row hover, the current row, a lighter pick |
-| `accent`, `accent_strong`, `on_accent` | links and buttons, the current item, text on the accent |
+| `accent`, `accent_strong`, `on_accent` | the primary button's fill, the current item, text on the accent |
+| `link` | text links and text-style actions (minor buttons, tools links); rows that are whole links keep the text colour |
 | `focus` | the focus ring |
 | `ok`, `warn`, `bad`, `ok_tint`, `warn_tint`, `bad_tint`, `bad_edge` | states and their backgrounds — only for states |
 | `idle_tint` | a neutral pill, an empty meter |

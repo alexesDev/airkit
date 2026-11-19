@@ -66,6 +66,9 @@ $airkit_demo_screens_agents_backups $airkit_section
 					<= Restore_slot* $mol_view
 						sub <= restore_slot* /
 	Restore* $mol_link
+		attr *
+			^
+			airkit_tone \bad
 		title @ \Restore this backup
 		arg *
 			restore <= restore_arg* \
