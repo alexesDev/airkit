@@ -547,7 +547,7 @@
 
 [airkit_air] [mol_check][disabled] > [mol_check_box_icon] {
 	background: var(--airkit_idle_tint);
-	box-shadow: inset 0 0 0 1.5px var(--airkit_edge);
+	box-shadow: inset 0 0 0 1.5px color-mix(in oklch, var(--airkit_shade) 60%, transparent);
 }
 
 [airkit_air] [mol_check][disabled][mol_check_checked="true"] > [mol_check_box_icon] {
