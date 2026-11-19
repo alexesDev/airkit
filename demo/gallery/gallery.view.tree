@@ -225,6 +225,19 @@ $airkit_demo_gallery $mol_page
 							control <= Note_control $mol_string
 								hint @ \May stay empty
 								value? <=> note? \
+						<= Enabled_field $mol_form_field
+							name @ \Enabled
+							Content <= Enabled_control $mol_check_box
+								checked? <=> field_enabled? true
+						<= Locked_field $mol_form_field
+							name @ \Pass API key (locked)
+							Content <= Locked_control $mol_check_box
+								checked true
+								enabled false
+						<= Locked_off_field $mol_form_field
+							name @ \Retry on failure (locked)
+							Content <= Locked_off_control $mol_check_box
+								enabled false
 					buttons /
 						<= Submit $mol_button_major
 							title @ \Create
@@ -370,7 +383,7 @@ $airkit_demo_gallery $mol_page
 							confirm_enabled false
 		<= Stock $airkit_section
 			title @ \Stock widgets under the theme
-			note @ \A checkbox, a portion bar, and a list of plain rows that are not links
+			note @ \Checkboxes off and on, enabled and disabled; a portion bar; a list of plain rows that are not links
 			source \https://github.com/alexesDev/airkit/tree/main/air
 			content /
 				<= Checks $mol_view
@@ -381,6 +394,13 @@ $airkit_demo_gallery $mol_page
 						<= Check_on $mol_check_box
 							title @ \Keep a copy of every reply
 							checked? <=> copies? true
+						<= Check_off_disabled $mol_check_box
+							title @ \Send a weekly digest
+							enabled false
+						<= Check_on_disabled $mol_check_box
+							title @ \Keep audit records
+							checked true
+							enabled false
 				<= Portions $mol_view
 					sub /
 						<= Portion_low $mol_portion
